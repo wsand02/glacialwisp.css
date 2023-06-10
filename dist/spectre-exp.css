@@ -14,8 +14,8 @@
   padding: .1rem;
 }
 .form-autocomplete .form-autocomplete-input.is-focused {
-  border-color: #5755d9;
-  box-shadow: 0 0 0 .1rem rgba(87, 85, 217, .2);
+  border-color: #23b0ff;
+  box-shadow: 0 0 0 .1rem rgba(35, 176, 255, .2);
 }
 .form-autocomplete .form-autocomplete-input .form-input {
   border-color: transparent;
@@ -113,23 +113,23 @@
   width: 1.4rem;
 }
 .calendar .calendar-date .date-item.date-today {
-  border-color: #e5e5f9;
-  color: #5755d9;
+  border-color: #d3efff;
+  color: #23b0ff;
 }
 .calendar .calendar-date .date-item:focus {
-  box-shadow: 0 0 0 .1rem rgba(87, 85, 217, .2);
+  box-shadow: 0 0 0 .1rem rgba(35, 176, 255, .2);
 }
 .calendar .calendar-date .date-item:focus,
 .calendar .calendar-date .date-item:hover {
-  background: #fefeff;
-  border-color: #e5e5f9;
-  color: #5755d9;
+  background: #f2faff;
+  border-color: #d3efff;
+  color: #23b0ff;
   text-decoration: none;
 }
 .calendar .calendar-date .date-item:active,
 .calendar .calendar-date .date-item.active {
-  background: #4b48d6;
-  border-color: #3634d2;
+  background: #14abff;
+  border-color: #00a0f9;
   color: #fff;
 }
 .calendar .calendar-date .date-item.badge::after {
@@ -156,7 +156,7 @@
   position: relative;
 }
 .calendar .calendar-range::before {
-  background: #f1f1fc;
+  background: #e2f5ff;
   content: "";
   height: 1.4rem;
   left: 0;
@@ -173,12 +173,12 @@
 }
 .calendar .calendar-range.range-start .date-item,
 .calendar .calendar-range.range-end .date-item {
-  background: #4b48d6;
-  border-color: #3634d2;
+  background: #14abff;
+  border-color: #00a0f9;
   color: #fff;
 }
 .calendar .calendar-range .date-item {
-  color: #5755d9;
+  color: #23b0ff;
 }
 .calendar.calendar-lg .calendar-body {
   padding: 0;
@@ -475,7 +475,7 @@
 .filter .filter-tag#tag-2:checked ~ .filter-nav .chip[for=tag-2],
 .filter .filter-tag#tag-1:checked ~ .filter-nav .chip[for=tag-1],
 .filter .filter-tag#tag-0:checked ~ .filter-nav .chip[for=tag-0] {
-  background: #5755d9;
+  background: #23b0ff;
   color: #fff;
 }
 
@@ -751,7 +751,7 @@
   background: #eef0f3;
   border: 0;
   border-radius: .1rem;
-  color: #5755d9;
+  color: #23b0ff;
   height: .2rem;
   position: relative;
   width: 100%;
@@ -761,16 +761,16 @@
   border-radius: .1rem;
 }
 .progress::-webkit-progress-value {
-  background: #5755d9;
+  background: #23b0ff;
   border-radius: .1rem;
 }
 .progress::-moz-progress-bar {
-  background: #5755d9;
+  background: #23b0ff;
   border-radius: .1rem;
 }
 .progress:indeterminate {
   animation: progress-indeterminate 1.5s linear infinite;
-  background: #eef0f3 linear-gradient(to right, #5755d9 30%, #eef0f3 30%) top left/150% 150% no-repeat;
+  background: #eef0f3 linear-gradient(to right, #23b0ff 30%, #eef0f3 30%) top left/150% 150% no-repeat;
 }
 .progress:indeterminate::-moz-progress-bar {
   background: transparent;
@@ -793,7 +793,7 @@
   width: 100%;
 }
 .slider:focus {
-  box-shadow: 0 0 0 .1rem rgba(87, 85, 217, .2);
+  box-shadow: 0 0 0 .1rem rgba(35, 176, 255, .2);
   outline: none;
 }
 .slider.tooltip:not([data-tooltip])::after {
@@ -801,7 +801,7 @@
 }
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background: #5755d9;
+  background: #23b0ff;
   border: 0;
   border-radius: 50%;
   height: .6rem;
@@ -811,7 +811,7 @@
   width: .6rem;
 }
 .slider::-moz-range-thumb {
-  background: #5755d9;
+  background: #23b0ff;
   border: 0;
   border-radius: 50%;
   height: .6rem;
@@ -820,7 +820,7 @@
   width: .6rem;
 }
 .slider::-ms-thumb {
-  background: #5755d9;
+  background: #23b0ff;
   border: 0;
   border-radius: 50%;
   height: .6rem;
@@ -871,7 +871,7 @@
   width: 100%;
 }
 .slider::-ms-fill-lower {
-  background: #5755d9;
+  background: #23b0ff;
 }
 
 .timeline .timeline-item {
@@ -912,7 +912,7 @@
   width: 1.2rem;
 }
 .timeline .timeline-item .timeline-icon::before {
-  border: .1rem solid #5755d9;
+  border: .1rem solid #23b0ff;
   border-radius: 50%;
   content: "";
   display: block;
@@ -923,7 +923,7 @@
   width: .4rem;
 }
 .timeline .timeline-item .timeline-icon.icon-lg {
-  background: #5755d9;
+  background: #23b0ff;
   line-height: 1.2rem;
 }
 .timeline .timeline-item .timeline-icon.icon-lg::before {

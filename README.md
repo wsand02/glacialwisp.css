@@ -2,7 +2,7 @@
   <img src="https://picturepan2.github.io/spectre/img/spectre-logo.svg" width="72" height="72">
 </a>
 
-## Spectre.css
+## A slightly modified version of Spectre.css
 
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 

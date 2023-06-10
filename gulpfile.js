@@ -10,9 +10,7 @@ const autoprefixer = require('gulp-autoprefixer');
 function build() {
   return gulp
     .src('./src/*.scss')
-    .pipe(
-      sass({ outputStyle: 'compact', precision: 10 }).on('error', sass.logError)
-    )
+    .pipe(sass({ precision: 10 }).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(csscomb())
     .pipe(gulp.dest('./dist'))
@@ -28,9 +26,7 @@ function build() {
 function docs_css() {
   return gulp
     .src(['./src/*.scss', './docs/src/scss/*.scss'])
-    .pipe(
-      sass({ outputStyle: 'compact', precision: 10 }).on('error', sass.logError)
-    )
+    .pipe(sass({ precision: 10 }).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(csscomb())
     .pipe(gulp.dest('./docs/dist'))
