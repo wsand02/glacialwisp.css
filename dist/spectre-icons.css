@@ -1,4 +1,4 @@
-/*! Spectre.css Icons v0.5.9 | MIT License | github.com/picturepan2/spectre */
+/*! Spectre.css Icons v0.5.9ws | MIT License | github.com/picturepan2/spectre */
 .icon {
   box-sizing: border-box;
   display: inline-block;
@@ -10,7 +10,8 @@
   vertical-align: middle;
   width: 1em;
 }
-.icon::before, .icon::after {
+.icon::before,
+.icon::after {
   content: "";
   display: block;
   left: 50%;
@@ -123,19 +124,30 @@
 
 .icon-menu::before {
   background: currentColor;
-  box-shadow: 0 -0.35em, 0 0.35em;
+  box-shadow:
+    0 -0.35em,
+    0 0.35em;
   height: 0.1rem;
   width: 100%;
 }
 
 .icon-apps::before {
   background: currentColor;
-  box-shadow: -0.35em -0.35em, -0.35em 0, -0.35em 0.35em, 0 -0.35em, 0 0.35em, 0.35em -0.35em, 0.35em 0, 0.35em 0.35em;
+  box-shadow:
+    -0.35em -0.35em,
+    -0.35em 0,
+    -0.35em 0.35em,
+    0 -0.35em,
+    0 0.35em,
+    0.35em -0.35em,
+    0.35em 0,
+    0.35em 0.35em;
   height: 3px;
   width: 3px;
 }
 
-.icon-resize-horiz::before, .icon-resize-horiz::after,
+.icon-resize-horiz::before,
+.icon-resize-horiz::after,
 .icon-resize-vert::before,
 .icon-resize-vert::after {
   border: 0.1rem solid currentColor;
@@ -163,14 +175,18 @@
 .icon-more-horiz::before,
 .icon-more-vert::before {
   background: currentColor;
-  box-shadow: -0.4em 0, 0.4em 0;
+  box-shadow:
+    -0.4em 0,
+    0.4em 0;
   border-radius: 50%;
   height: 3px;
   width: 3px;
 }
 
 .icon-more-vert::before {
-  box-shadow: 0 -0.4em, 0 0.4em;
+  box-shadow:
+    0 -0.4em,
+    0 0.4em;
 }
 
 .icon-plus::before,
@@ -194,7 +210,8 @@
 .icon-cross::after {
   height: 100%;
 }
-.icon-cross::before, .icon-cross::after {
+.icon-cross::before,
+.icon-cross::after {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
@@ -294,7 +311,9 @@
 }
 .icon-delete::after {
   background: currentColor;
-  box-shadow: -0.25em 0.2em, 0.25em 0.2em;
+  box-shadow:
+    -0.25em 0.2em,
+    0.25em 0.2em;
   height: 0.1rem;
   top: 0.05rem;
   width: 0.5em;
@@ -503,7 +522,8 @@
   width: 0.5em;
 }
 
-.icon-link::before, .icon-link::after {
+.icon-link::before,
+.icon-link::after {
   border: 0.1rem solid currentColor;
   border-radius: 5em 0 0 5em;
   border-right: 0;
@@ -538,7 +558,9 @@
 }
 .icon-emoji::before {
   border-radius: 50%;
-  box-shadow: -0.17em -0.1em, 0.17em -0.1em;
+  box-shadow:
+    -0.17em -0.1em,
+    0.17em -0.1em;
   height: 0.15em;
   width: 0.15em;
 }

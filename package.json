@@ -12,13 +12,13 @@
   "scripts": {
     "css": "npm-run-all css-compile css-minify css-format",
     "css-compile": "sass src/:dist --no-source-map --style expanded",
-    "css-minify": "cleancss -O1 --output dist/ --batch --batch-suffix \".min\" \"dist/*.css\" \"!dist/*.min.css\"",
+    "css-minify": "cleancss -O2 --output dist/ --batch --batch-suffix \".min\" \"dist/*.css\" \"!dist/*.min.css\"",
     "css-format": "prettier --write \"dist/*.css\"",
     "docs": "npm-run-all docs-css docs-pug",
     "docs-css": "npm-run-all docs-css-compile1 docs-css-compile2 docs-css-minify docs-css-format",
     "docs-css-compile1": "sass src/:docs/dist --no-source-map --style expanded",
     "docs-css-compile2": "sass docs/src/scss:docs/dist --no-source-map --style expanded",
-    "docs-css-minify": "cleancss -O1 --output docs/dist/ --batch --batch-suffix \".min\" \"docs/dist/*.css\" \"!docs/dist/*.min.css\"",
+    "docs-css-minify": "cleancss -O2 --output docs/dist/ --batch --batch-suffix \".min\" \"docs/dist/*.css\" \"!docs/dist/*.min.css\"",
     "docs-css-format": "prettier --write \"docs/dist/*.css\"",
     "docs-pug": "node compile-docs.js",
     "docs-serve": "http-server docs -p 8080 -c-1"

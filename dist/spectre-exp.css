@@ -1,4 +1,4 @@
-/*! Spectre.css Experimentals v0.5.9 | MIT License | github.com/picturepan2/spectre */
+/*! Spectre.css Experimentals v0.5.9ws | MIT License | github.com/picturepan2/spectre */
 .form-autocomplete {
   position: relative;
 }
@@ -46,7 +46,7 @@
 }
 .calendar .calendar-nav {
   align-items: center;
-  background: rgb(223.3064516129, 221.1935483871, 221.1935483871);
+  background: #f5f5f5;
   border-top-left-radius: 0.1rem;
   border-top-right-radius: 0.1rem;
   display: flex;
@@ -66,8 +66,9 @@
   max-width: 14.28%;
 }
 .calendar .calendar-header {
-  background: rgb(223.3064516129, 221.1935483871, 221.1935483871);
-  border-bottom: 0.05rem solid rgb(198.6290322581, 194.8709677419, 194.8709677419);
+  background: #f5f5f5;
+  border-bottom: 0.05rem solid
+    rgb(198.6290322581, 194.8709677419, 194.8709677419);
   color: rgb(173.9516129032, 168.5483870968, 168.5483870968);
   font-size: 0.7rem;
   text-align: center;
@@ -94,7 +95,11 @@
   position: relative;
   text-align: center;
   text-decoration: none;
-  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    border 0.2s,
+    box-shadow 0.2s,
+    color 0.2s;
   vertical-align: middle;
   white-space: nowrap;
   width: 1.4rem;
@@ -106,13 +111,15 @@
 .calendar .calendar-date .date-item:focus {
   box-shadow: 0 0 0 0.1rem rgba(35, 176, 255, 0.2);
 }
-.calendar .calendar-date .date-item:focus, .calendar .calendar-date .date-item:hover {
+.calendar .calendar-date .date-item:focus,
+.calendar .calendar-date .date-item:hover {
   background: rgb(241.55, 250.1702272727, 255);
   border-color: rgb(210.95, 239.1820454545, 255);
   color: #23b0ff;
   text-decoration: none;
 }
-.calendar .calendar-date .date-item:active, .calendar .calendar-date .date-item.active {
+.calendar .calendar-date .date-item:active,
+.calendar .calendar-date .date-item.active {
   background: rgb(19.7, 170.5059090909, 255);
   border-color: rgb(0, 159.7145454545, 249.2);
   color: #fff;
@@ -123,7 +130,8 @@
   right: 3px;
   transform: translate(50%, -50%);
 }
-.calendar .calendar-date .date-item:disabled, .calendar .calendar-date .date-item.disabled,
+.calendar .calendar-date .date-item:disabled,
+.calendar .calendar-date .date-item.disabled,
 .calendar .calendar-date .calendar-event:disabled,
 .calendar .calendar-date .calendar-event.disabled {
   cursor: default;
@@ -131,7 +139,8 @@
   pointer-events: none;
 }
 .calendar .calendar-date.prev-month .date-item,
-.calendar .calendar-date.prev-month .calendar-event, .calendar .calendar-date.next-month .date-item,
+.calendar .calendar-date.prev-month .calendar-event,
+.calendar .calendar-date.next-month .date-item,
 .calendar .calendar-date.next-month .calendar-event {
   opacity: 0.25;
 }
@@ -154,7 +163,8 @@
 .calendar .calendar-range.range-end::before {
   right: 50%;
 }
-.calendar .calendar-range.range-start .date-item, .calendar .calendar-range.range-end .date-item {
+.calendar .calendar-range.range-start .date-item,
+.calendar .calendar-range.range-end .date-item {
   background: rgb(19.7, 170.5059090909, 255);
   border-color: rgb(0, 159.7145454545, 249.2);
   color: #fff;
@@ -166,8 +176,10 @@
   padding: 0;
 }
 .calendar.calendar-lg .calendar-body .calendar-date {
-  border-bottom: 0.05rem solid rgb(198.6290322581, 194.8709677419, 194.8709677419);
-  border-right: 0.05rem solid rgb(198.6290322581, 194.8709677419, 194.8709677419);
+  border-bottom: 0.05rem solid
+    rgb(198.6290322581, 194.8709677419, 194.8709677419);
+  border-right: 0.05rem solid
+    rgb(198.6290322581, 194.8709677419, 194.8709677419);
   display: flex;
   flex-direction: column;
   height: 5.5rem;
@@ -176,7 +188,7 @@
 .calendar.calendar-lg .calendar-body .calendar-date:nth-child(7n) {
   border-right: 0;
 }
-.calendar.calendar-lg .calendar-body .calendar-date:nth-last-child(-n+7) {
+.calendar.calendar-lg .calendar-body .calendar-date:nth-last-child(-n + 7) {
   border-bottom: 0;
 }
 .calendar.calendar-lg .date-item {
@@ -212,18 +224,80 @@
   white-space: nowrap;
 }
 
-.carousel .carousel-locator:nth-of-type(8):checked ~ .carousel-container .carousel-item:nth-of-type(8), .carousel .carousel-locator:nth-of-type(7):checked ~ .carousel-container .carousel-item:nth-of-type(7), .carousel .carousel-locator:nth-of-type(6):checked ~ .carousel-container .carousel-item:nth-of-type(6), .carousel .carousel-locator:nth-of-type(5):checked ~ .carousel-container .carousel-item:nth-of-type(5), .carousel .carousel-locator:nth-of-type(4):checked ~ .carousel-container .carousel-item:nth-of-type(4), .carousel .carousel-locator:nth-of-type(3):checked ~ .carousel-container .carousel-item:nth-of-type(3), .carousel .carousel-locator:nth-of-type(2):checked ~ .carousel-container .carousel-item:nth-of-type(2), .carousel .carousel-locator:nth-of-type(1):checked ~ .carousel-container .carousel-item:nth-of-type(1) {
+.carousel
+  .carousel-locator:nth-of-type(8):checked
+  ~ .carousel-container
+  .carousel-item:nth-of-type(8),
+.carousel
+  .carousel-locator:nth-of-type(7):checked
+  ~ .carousel-container
+  .carousel-item:nth-of-type(7),
+.carousel
+  .carousel-locator:nth-of-type(6):checked
+  ~ .carousel-container
+  .carousel-item:nth-of-type(6),
+.carousel
+  .carousel-locator:nth-of-type(5):checked
+  ~ .carousel-container
+  .carousel-item:nth-of-type(5),
+.carousel
+  .carousel-locator:nth-of-type(4):checked
+  ~ .carousel-container
+  .carousel-item:nth-of-type(4),
+.carousel
+  .carousel-locator:nth-of-type(3):checked
+  ~ .carousel-container
+  .carousel-item:nth-of-type(3),
+.carousel
+  .carousel-locator:nth-of-type(2):checked
+  ~ .carousel-container
+  .carousel-item:nth-of-type(2),
+.carousel
+  .carousel-locator:nth-of-type(1):checked
+  ~ .carousel-container
+  .carousel-item:nth-of-type(1) {
   animation: carousel-slidein 0.75s ease-in-out 1;
   opacity: 1;
   z-index: 100;
 }
 
-.carousel .carousel-locator:nth-of-type(8):checked ~ .carousel-nav .nav-item:nth-of-type(8), .carousel .carousel-locator:nth-of-type(7):checked ~ .carousel-nav .nav-item:nth-of-type(7), .carousel .carousel-locator:nth-of-type(6):checked ~ .carousel-nav .nav-item:nth-of-type(6), .carousel .carousel-locator:nth-of-type(5):checked ~ .carousel-nav .nav-item:nth-of-type(5), .carousel .carousel-locator:nth-of-type(4):checked ~ .carousel-nav .nav-item:nth-of-type(4), .carousel .carousel-locator:nth-of-type(3):checked ~ .carousel-nav .nav-item:nth-of-type(3), .carousel .carousel-locator:nth-of-type(2):checked ~ .carousel-nav .nav-item:nth-of-type(2), .carousel .carousel-locator:nth-of-type(1):checked ~ .carousel-nav .nav-item:nth-of-type(1) {
+.carousel
+  .carousel-locator:nth-of-type(8):checked
+  ~ .carousel-nav
+  .nav-item:nth-of-type(8),
+.carousel
+  .carousel-locator:nth-of-type(7):checked
+  ~ .carousel-nav
+  .nav-item:nth-of-type(7),
+.carousel
+  .carousel-locator:nth-of-type(6):checked
+  ~ .carousel-nav
+  .nav-item:nth-of-type(6),
+.carousel
+  .carousel-locator:nth-of-type(5):checked
+  ~ .carousel-nav
+  .nav-item:nth-of-type(5),
+.carousel
+  .carousel-locator:nth-of-type(4):checked
+  ~ .carousel-nav
+  .nav-item:nth-of-type(4),
+.carousel
+  .carousel-locator:nth-of-type(3):checked
+  ~ .carousel-nav
+  .nav-item:nth-of-type(3),
+.carousel
+  .carousel-locator:nth-of-type(2):checked
+  ~ .carousel-nav
+  .nav-item:nth-of-type(2),
+.carousel
+  .carousel-locator:nth-of-type(1):checked
+  ~ .carousel-nav
+  .nav-item:nth-of-type(1) {
   color: rgb(223.3064516129, 221.1935483871, 221.1935483871);
 }
 
 .carousel {
-  background: rgb(223.3064516129, 221.1935483871, 221.1935483871);
+  background: #f5f5f5;
   display: block;
   overflow: hidden;
   position: relative;
@@ -370,7 +444,9 @@
 .comparison-slider .comparison-after::after {
   background: currentColor;
   border-radius: 50%;
-  box-shadow: 0 -5px, 0 5px;
+  box-shadow:
+    0 -5px,
+    0 5px;
   color: #fff;
   content: "";
   height: 3px;
@@ -425,12 +501,51 @@
     width: 0;
   }
 }
-.filter .filter-tag#tag-8:checked ~ .filter-nav .chip[for=tag-8], .filter .filter-tag#tag-7:checked ~ .filter-nav .chip[for=tag-7], .filter .filter-tag#tag-6:checked ~ .filter-nav .chip[for=tag-6], .filter .filter-tag#tag-5:checked ~ .filter-nav .chip[for=tag-5], .filter .filter-tag#tag-4:checked ~ .filter-nav .chip[for=tag-4], .filter .filter-tag#tag-3:checked ~ .filter-nav .chip[for=tag-3], .filter .filter-tag#tag-2:checked ~ .filter-nav .chip[for=tag-2], .filter .filter-tag#tag-1:checked ~ .filter-nav .chip[for=tag-1], .filter .filter-tag#tag-0:checked ~ .filter-nav .chip[for=tag-0] {
+.filter .filter-tag#tag-8:checked ~ .filter-nav .chip[for="tag-8"],
+.filter .filter-tag#tag-7:checked ~ .filter-nav .chip[for="tag-7"],
+.filter .filter-tag#tag-6:checked ~ .filter-nav .chip[for="tag-6"],
+.filter .filter-tag#tag-5:checked ~ .filter-nav .chip[for="tag-5"],
+.filter .filter-tag#tag-4:checked ~ .filter-nav .chip[for="tag-4"],
+.filter .filter-tag#tag-3:checked ~ .filter-nav .chip[for="tag-3"],
+.filter .filter-tag#tag-2:checked ~ .filter-nav .chip[for="tag-2"],
+.filter .filter-tag#tag-1:checked ~ .filter-nav .chip[for="tag-1"],
+.filter .filter-tag#tag-0:checked ~ .filter-nav .chip[for="tag-0"] {
   background: #23b0ff;
   color: #fff;
 }
 
-.filter .filter-tag#tag-8:checked ~ .filter-body .filter-item:not([data-tag~=tag-8]), .filter .filter-tag#tag-7:checked ~ .filter-body .filter-item:not([data-tag~=tag-7]), .filter .filter-tag#tag-6:checked ~ .filter-body .filter-item:not([data-tag~=tag-6]), .filter .filter-tag#tag-5:checked ~ .filter-body .filter-item:not([data-tag~=tag-5]), .filter .filter-tag#tag-4:checked ~ .filter-body .filter-item:not([data-tag~=tag-4]), .filter .filter-tag#tag-3:checked ~ .filter-body .filter-item:not([data-tag~=tag-3]), .filter .filter-tag#tag-2:checked ~ .filter-body .filter-item:not([data-tag~=tag-2]), .filter .filter-tag#tag-1:checked ~ .filter-body .filter-item:not([data-tag~=tag-1]) {
+.filter
+  .filter-tag#tag-8:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-8"]),
+.filter
+  .filter-tag#tag-7:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-7"]),
+.filter
+  .filter-tag#tag-6:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-6"]),
+.filter
+  .filter-tag#tag-5:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-5"]),
+.filter
+  .filter-tag#tag-4:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-4"]),
+.filter
+  .filter-tag#tag-3:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-3"]),
+.filter
+  .filter-tag#tag-2:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-2"]),
+.filter
+  .filter-tag#tag-1:checked
+  ~ .filter-body
+  .filter-item:not([data-tag~="tag-1"]) {
   display: none;
 }
 
@@ -443,7 +558,7 @@
 }
 .meter {
   appearance: none;
-  background: rgb(223.3064516129, 221.1935483871, 221.1935483871);
+  background: #f5f5f5;
   border: 0;
   border-radius: 0.1rem;
   display: block;
@@ -453,11 +568,14 @@
 .meter::-webkit-meter-inner-element {
   display: block;
 }
-.meter::-webkit-meter-bar, .meter::-webkit-meter-optimum-value, .meter::-webkit-meter-suboptimum-value, .meter::-webkit-meter-even-less-good-value {
+.meter::-webkit-meter-bar,
+.meter::-webkit-meter-optimum-value,
+.meter::-webkit-meter-suboptimum-value,
+.meter::-webkit-meter-even-less-good-value {
   border-radius: 0.1rem;
 }
 .meter::-webkit-meter-bar {
-  background: rgb(223.3064516129, 221.1935483871, 221.1935483871);
+  background: #f5f5f5;
 }
 .meter::-webkit-meter-optimum-value {
   background: #32b643;
@@ -468,7 +586,10 @@
 .meter::-webkit-meter-even-less-good-value {
   background: #e85600;
 }
-.meter::-moz-meter-bar, .meter:-moz-meter-optimum, .meter:-moz-meter-sub-optimum, .meter:-moz-meter-sub-sub-optimum {
+.meter::-moz-meter-bar,
+.meter:-moz-meter-optimum,
+.meter:-moz-meter-sub-optimum,
+.meter:-moz-meter-sub-sub-optimum {
   border-radius: 0.1rem;
 }
 .meter:-moz-meter-optimum::-moz-meter-bar {
@@ -497,7 +618,7 @@
   left: 0.4rem;
 }
 .off-canvas .off-canvas-sidebar {
-  background: rgb(223.3064516129, 221.1935483871, 221.1935483871);
+  background: #f5f5f5;
   bottom: 0;
   min-width: 10rem;
   overflow-y: auto;
@@ -526,10 +647,12 @@
   top: 0;
   width: 100%;
 }
-.off-canvas .off-canvas-sidebar:target, .off-canvas .off-canvas-sidebar.active {
+.off-canvas .off-canvas-sidebar:target,
+.off-canvas .off-canvas-sidebar.active {
   transform: translateX(0);
 }
-.off-canvas .off-canvas-sidebar:target ~ .off-canvas-overlay, .off-canvas .off-canvas-sidebar.active ~ .off-canvas-overlay {
+.off-canvas .off-canvas-sidebar:target ~ .off-canvas-overlay,
+.off-canvas .off-canvas-sidebar.active ~ .off-canvas-overlay {
   display: block;
   z-index: 100;
 }
@@ -595,13 +718,20 @@
   left: 0;
   top: 0;
 }
-.parallax .parallax-top-left:focus ~ .parallax-content, .parallax .parallax-top-left:hover ~ .parallax-content {
+.parallax .parallax-top-left:focus ~ .parallax-content,
+.parallax .parallax-top-left:hover ~ .parallax-content {
   transform: perspective(1000px) rotateX(3deg) rotateY(-3deg);
 }
-.parallax .parallax-top-left:focus ~ .parallax-content::before, .parallax .parallax-top-left:hover ~ .parallax-content::before {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, transparent 50%);
+.parallax .parallax-top-left:focus ~ .parallax-content::before,
+.parallax .parallax-top-left:hover ~ .parallax-content::before {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    transparent 50%
+  );
 }
-.parallax .parallax-top-left:focus ~ .parallax-content .parallax-front, .parallax .parallax-top-left:hover ~ .parallax-content .parallax-front {
+.parallax .parallax-top-left:focus ~ .parallax-content .parallax-front,
+.parallax .parallax-top-left:hover ~ .parallax-content .parallax-front {
   transform: translate3d(4.5px, 4.5px, 50px) scale(0.95);
 }
 .parallax .parallax-top-right {
@@ -613,13 +743,20 @@
   right: 0;
   top: 0;
 }
-.parallax .parallax-top-right:focus ~ .parallax-content, .parallax .parallax-top-right:hover ~ .parallax-content {
+.parallax .parallax-top-right:focus ~ .parallax-content,
+.parallax .parallax-top-right:hover ~ .parallax-content {
   transform: perspective(1000px) rotateX(3deg) rotateY(3deg);
 }
-.parallax .parallax-top-right:focus ~ .parallax-content::before, .parallax .parallax-top-right:hover ~ .parallax-content::before {
-  background: linear-gradient(-135deg, rgba(255, 255, 255, 0.35) 0%, transparent 50%);
+.parallax .parallax-top-right:focus ~ .parallax-content::before,
+.parallax .parallax-top-right:hover ~ .parallax-content::before {
+  background: linear-gradient(
+    -135deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    transparent 50%
+  );
 }
-.parallax .parallax-top-right:focus ~ .parallax-content .parallax-front, .parallax .parallax-top-right:hover ~ .parallax-content .parallax-front {
+.parallax .parallax-top-right:focus ~ .parallax-content .parallax-front,
+.parallax .parallax-top-right:hover ~ .parallax-content .parallax-front {
   transform: translate3d(-4.5px, 4.5px, 50px) scale(0.95);
 }
 .parallax .parallax-bottom-left {
@@ -631,13 +768,20 @@
   bottom: 0;
   left: 0;
 }
-.parallax .parallax-bottom-left:focus ~ .parallax-content, .parallax .parallax-bottom-left:hover ~ .parallax-content {
+.parallax .parallax-bottom-left:focus ~ .parallax-content,
+.parallax .parallax-bottom-left:hover ~ .parallax-content {
   transform: perspective(1000px) rotateX(-3deg) rotateY(-3deg);
 }
-.parallax .parallax-bottom-left:focus ~ .parallax-content::before, .parallax .parallax-bottom-left:hover ~ .parallax-content::before {
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.35) 0%, transparent 50%);
+.parallax .parallax-bottom-left:focus ~ .parallax-content::before,
+.parallax .parallax-bottom-left:hover ~ .parallax-content::before {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    transparent 50%
+  );
 }
-.parallax .parallax-bottom-left:focus ~ .parallax-content .parallax-front, .parallax .parallax-bottom-left:hover ~ .parallax-content .parallax-front {
+.parallax .parallax-bottom-left:focus ~ .parallax-content .parallax-front,
+.parallax .parallax-bottom-left:hover ~ .parallax-content .parallax-front {
   transform: translate3d(4.5px, -4.5px, 50px) scale(0.95);
 }
 .parallax .parallax-bottom-right {
@@ -649,19 +793,26 @@
   bottom: 0;
   right: 0;
 }
-.parallax .parallax-bottom-right:focus ~ .parallax-content, .parallax .parallax-bottom-right:hover ~ .parallax-content {
+.parallax .parallax-bottom-right:focus ~ .parallax-content,
+.parallax .parallax-bottom-right:hover ~ .parallax-content {
   transform: perspective(1000px) rotateX(-3deg) rotateY(3deg);
 }
-.parallax .parallax-bottom-right:focus ~ .parallax-content::before, .parallax .parallax-bottom-right:hover ~ .parallax-content::before {
-  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.35) 0%, transparent 50%);
+.parallax .parallax-bottom-right:focus ~ .parallax-content::before,
+.parallax .parallax-bottom-right:hover ~ .parallax-content::before {
+  background: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    transparent 50%
+  );
 }
-.parallax .parallax-bottom-right:focus ~ .parallax-content .parallax-front, .parallax .parallax-bottom-right:hover ~ .parallax-content .parallax-front {
+.parallax .parallax-bottom-right:focus ~ .parallax-content .parallax-front,
+.parallax .parallax-bottom-right:hover ~ .parallax-content .parallax-front {
   transform: translate3d(-4.5px, -4.5px, 50px) scale(0.95);
 }
 
 .progress {
   appearance: none;
-  background: rgb(215.9032258065, 213.2967741935, 213.2967741935);
+  background: rgb(237.35, 237.35, 237.35);
   border: 0;
   border-radius: 0.1rem;
   color: #23b0ff;
@@ -683,7 +834,9 @@
 }
 .progress:indeterminate {
   animation: progress-indeterminate 1.5s linear infinite;
-  background: rgb(215.9032258065, 213.2967741935, 213.2967741935) linear-gradient(to right, #23b0ff 30%, rgb(215.9032258065, 213.2967741935, 213.2967741935) 30%) top left/150% 150% no-repeat;
+  background: rgb(237.35, 237.35, 237.35)
+    linear-gradient(to right, #23b0ff 30%, rgb(237.35, 237.35, 237.35) 30%) top
+    left/150% 150% no-repeat;
 }
 .progress:indeterminate::-moz-progress-bar {
   background: transparent;
@@ -746,32 +899,35 @@
 .slider:active::-ms-thumb {
   transform: scale(1.25);
 }
-.slider:disabled::-webkit-slider-thumb, .slider.disabled::-webkit-slider-thumb {
+.slider:disabled::-webkit-slider-thumb,
+.slider.disabled::-webkit-slider-thumb {
   background: rgb(223.3064516129, 221.1935483871, 221.1935483871);
   transform: scale(1);
 }
-.slider:disabled::-moz-range-thumb, .slider.disabled::-moz-range-thumb {
+.slider:disabled::-moz-range-thumb,
+.slider.disabled::-moz-range-thumb {
   background: rgb(223.3064516129, 221.1935483871, 221.1935483871);
   transform: scale(1);
 }
-.slider:disabled::-ms-thumb, .slider.disabled::-ms-thumb {
+.slider:disabled::-ms-thumb,
+.slider.disabled::-ms-thumb {
   background: rgb(223.3064516129, 221.1935483871, 221.1935483871);
   transform: scale(1);
 }
 .slider::-webkit-slider-runnable-track {
-  background: rgb(215.9032258065, 213.2967741935, 213.2967741935);
+  background: rgb(237.35, 237.35, 237.35);
   border-radius: 0.1rem;
   height: 0.1rem;
   width: 100%;
 }
 .slider::-moz-range-track {
-  background: rgb(215.9032258065, 213.2967741935, 213.2967741935);
+  background: rgb(237.35, 237.35, 237.35);
   border-radius: 0.1rem;
   height: 0.1rem;
   width: 100%;
 }
 .slider::-ms-track {
-  background: rgb(215.9032258065, 213.2967741935, 213.2967741935);
+  background: rgb(237.35, 237.35, 237.35);
   border-radius: 0.1rem;
   height: 0.1rem;
   width: 100%;
