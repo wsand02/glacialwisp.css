@@ -22,7 +22,7 @@
 
 @include bg-color-variant(".bg-dark", $dark-color);
 
-@include bg-color-variant(".bg-gray", $bg-color);
+@include bg-dynamic-color-variant(".bg-gray", "--color-background");
 
 @include bg-color-variant(".bg-success", $success-color);
 

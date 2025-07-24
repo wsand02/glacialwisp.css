@@ -1,14 +1,7 @@
 {
-  "name": "spectre.css",
-  "version": "0.5.9",
-  "homepage": "http://picturepan2.github.io/spectre",
-  "author": "Yan Zhu <picturepan2@hotmail.com>",
-  "description": "Spectre.css: A lightweight, responsive and modern CSS framework",
-  "main": "dist/spectre.css",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/picturepan2/spectre.git"
-  },
+  "name": "glacialwisp.css",
+  "version": "0.5.10",
+  "main": "dist/glacialwisp.css",
   "scripts": {
     "css": "npm-run-all css-compile css-minify css-format",
     "css-compile": "sass src/:dist --no-source-map --style expanded",
@@ -34,9 +27,6 @@
     "sass",
     "modern"
   ],
-  "bugs": {
-    "url": "https://github.com/picturepan2/spectre/issues"
-  },
   "browserslist": [
     "last 4 Chrome versions",
     "Edge >= 12",

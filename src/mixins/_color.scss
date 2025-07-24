@@ -9,6 +9,13 @@
   }
 }
 
+@mixin bg-dynamic-color-variant($selector, $css-var-name) {
+  #{$selector} {
+    background-color: var(#{$css-var-name}) !important;
+    color: var(#{--color-text});
+  }
+}
+
 // Text color utility mixin
 @mixin text-color-variant($name: ".text-primary", $color: $primary-color) {
   #{$name} {

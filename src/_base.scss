@@ -13,8 +13,8 @@ html {
 }
 
 body {
-  background: $body-bg;
-  color: $body-font-color;
+  background: var(--color-body-background);
+  color: var(--color-text);
   font-family: $body-font-family;
   font-size: $font-size;
   overflow-x: hidden;

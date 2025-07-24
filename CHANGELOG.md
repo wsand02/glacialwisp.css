@@ -1,5 +1,14 @@
 #### Spectre.css Changelog
 
+##### v0.6.0 
+
+- Changed colors
+- Moved away from gulp
+- Jerryrigged Prismjs support
+- Removed bloat
+- Renamed to GlacialWisp to differentiate from Spectre.css
+- Jerryrig dark mode
+
 ##### v0.5.9 [#](https://github.com/picturepan2/spectre/releases/tag/v0.5.9)
 
 - Update gulp and dependencies
