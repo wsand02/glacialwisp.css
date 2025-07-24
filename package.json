@@ -9,6 +9,20 @@
     "type": "git",
     "url": "https://github.com/picturepan2/spectre.git"
   },
+  "scripts": {
+    "css": "npm-run-all css-compile css-minify css-format",
+    "css-compile": "sass src/:dist --no-source-map --style expanded",
+    "css-minify": "cleancss -O1 --output dist/ --batch --batch-suffix \".min\" \"dist/*.css\" \"!dist/*.min.css\"",
+    "css-format": "prettier --write \"dist/*.css\"",
+    "docs": "npm-run-all docs-css docs-pug",
+    "docs-css": "npm-run-all docs-css-compile1 docs-css-compile2 docs-css-minify docs-css-format",
+    "docs-css-compile1": "sass src/:docs/dist --no-source-map --style expanded",
+    "docs-css-compile2": "sass docs/src/scss:docs/dist --no-source-map --style expanded",
+    "docs-css-minify": "cleancss -O1 --output docs/dist/ --batch --batch-suffix \".min\" \"docs/dist/*.css\" \"!docs/dist/*.min.css\"",
+    "docs-css-format": "prettier --write \"docs/dist/*.css\"",
+    "docs-pug": "node compile-docs.js",
+    "docs-serve": "http-server docs -p 8080 -c-1"
+  },
   "license": "MIT",
   "keywords": [
     "css",
@@ -23,17 +37,6 @@
   "bugs": {
     "url": "https://github.com/picturepan2/spectre/issues"
   },
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-csscomb": "^3.1.0",
-    "gulp-pug": "^5.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0",
-    "jstransformer-highlight": "^2.0.0",
-    "jstransformer-markdown-it": "^3.0.0"
-  },
   "browserslist": [
     "last 4 Chrome versions",
     "Edge >= 12",
@@ -42,7 +45,16 @@
     "last 4 Opera versions",
     "Explorer >= 10"
   ],
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "http-server": "^14.1.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.6.2",
+    "prismjs": "^1.30.0",
+    "sass": "^1.89.2"
+  },
   "dependencies": {
-    "sass": "^1.63.3"
+    "markdown-it": "^14.1.0",
+    "pug": "^3.0.3"
   }
 }

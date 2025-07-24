@@ -237,63 +237,63 @@
               <li>Then create your <code>project-name.scss</code> file in the root folder. You can use <code>project-name.scss</code> to define your variables.</li>
               <li>Compile the Sass file to CSS to get the custom version of Spectre.</li>
             </ul>
-            <pre class="code" data-lang="Sass"><code><span class="hljs-comment">// Example of project-name.scss</span>
-<span class="hljs-comment">// Define variables to override default ones</span>
-<span class="hljs-variable">$primary-color</span>: <span class="hljs-number">#2e5bec</span>;
-<span class="hljs-variable">$dark-color</span>: <span class="hljs-number">#3e396b</span>;
+            <pre class="code" data-lang="Sass"><code><span class="token comment">// Example of project-name.scss</span>
+<span class="token comment">// Define variables to override default ones</span>
+<span class="token property"><span class="token variable">$primary-color</span></span><span class="token punctuation">:</span> #2e5bec<span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$dark-color</span></span><span class="token punctuation">:</span> #3e396b<span class="token punctuation">;</span>
 
-<span class="hljs-comment">// Import full Spectre source code</span>
-<span class="hljs-keyword">@import</span> <span class="hljs-string">"node_modules/spectre.css/src/spectre"</span>;
+<span class="token comment">// Import full Spectre source code</span>
+<span class="token keyword">@import</span> <span class="token string">"node_modules/spectre.css/src/spectre"</span><span class="token punctuation">;</span>
 </code></pre>
             <p>Alternatively, you can create custom <code>_variables.scss</code> and import it to <code>project-name.scss</code>.</p>
-            <pre class="code" data-lang="Sass"><code><span class="hljs-comment">// Example of project-name.scss</span>
-<span class="hljs-keyword">@import</span> <span class="hljs-string">"variables"</span>;
+            <pre class="code" data-lang="Sass"><code><span class="token comment">// Example of project-name.scss</span>
+<span class="token keyword">@import</span> <span class="token string">"variables"</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// Import only the needed components</span>
-<span class="hljs-keyword">@import</span> <span class="hljs-string">"node_modules/spectre.css/src/buttons"</span>;
-<span class="hljs-keyword">@import</span> <span class="hljs-string">"node_modules/spectre.css/src/forms"</span>;
+<span class="token comment">// Import only the needed components</span>
+<span class="token keyword">@import</span> <span class="token string">"node_modules/spectre.css/src/buttons"</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">"node_modules/spectre.css/src/forms"</span><span class="token punctuation">;</span>
 </code></pre>
             <h4 class="s-subtitle" id="folders">Folder structure<a class="anchor" href="#folders" aria-hidden="true">#</a></h4>
             <pre class="code"><code>spectre/
-├── <span class="hljs-built_in">dist</span>/                           <span class="hljs-comment">// Build folder</span>
-│   ├── spectre-<span class="hljs-built_in">exp</span>.css
-│   ├── spectre-<span class="hljs-built_in">exp</span>.<span class="hljs-built_in">min</span>.css
+├── dist/                           // Build folder
+│   ├── spectre-exp.css
+│   ├── spectre-exp.min.css
 │   ├── spectre-icons.css
-│   ├── spectre-icons.<span class="hljs-built_in">min</span>.css
+│   ├── spectre-icons.min.css
 │   ├── spectre.css
-│   └── spectre.<span class="hljs-built_in">min</span>.css
+│   └── spectre.min.css
 │
 ├── docs/
-│   ├── <span class="hljs-built_in">dist</span>/                       <span class="hljs-comment">// Pre-built CSS folder</span>
-│   │   ├── spectre-<span class="hljs-built_in">exp</span>.css
-│   │   ├── spectre-<span class="hljs-built_in">exp</span>.<span class="hljs-built_in">min</span>.css
+│   ├── dist/                       // Pre-built CSS folder
+│   │   ├── spectre-exp.css
+│   │   ├── spectre-exp.min.css
 │   │   ├── spectre-icons.css
-│   │   ├── spectre-icons.<span class="hljs-built_in">min</span>.css
+│   │   ├── spectre-icons.min.css
 │   │   ├── spectre.css
-│   │   └── spectre.<span class="hljs-built_in">min</span>.css
-|   ├── css/                        <span class="hljs-comment">// Docs CSS files</span>
+│   │   └── spectre.min.css
+|   ├── css/                        // Docs CSS files
 │   │   └── docs.css
 |   ├── src/
-│   │   ├── scss                    <span class="hljs-comment">// Docs Sass files</span>
+│   │   ├── scss                    // Docs Sass files
 │   │   │   └── docs.scss
-│   │   ├── index.pug               <span class="hljs-comment">// Docs Pug files</span>
+│   │   ├── index.pug               // Docs Pug files
 │   │   └── ...
-│   ├── examples/                   <span class="hljs-comment">// Example tempalte</span>
+│   ├── examples/                   // Example tempalte
 │   │   └── starter.html
 │   ├── ../
 │   ├── index.html
 │   └── ...
 │
-├── src/                            <span class="hljs-comment">// Source Sass files</span>
+├── src/                            // Source Sass files
 │   ├── spectre.scss
 │   ├── spectre-icons.scss
-│   ├── spectre-<span class="hljs-built_in">exp</span>.scss
+│   ├── spectre-exp.scss
 │   ├── _mixins.scss
 │   ├── _variables.scss
 │   └── ...
 │
 ├── gulpfile.js
-├── <span class="hljs-keyword">package</span>.json
+├── package.json
 └── ...
 </code></pre>
             <h4 class="s-subtitle" id="variables">Variables<a class="anchor" href="#variables" aria-hidden="true">#</a></h4>
@@ -371,15 +371,15 @@
               <li>@mixin button-variant(<code>$color</code>: $primary-color);</li>
               <li>@mixin button-outline-variant(<code>$color</code>: $primary-color);</li>
             </ul>
-            <pre class="code" data-lang="Sass"><code>&lt;!-- filled <span class="hljs-selector-tag">button</span> with the success <span class="hljs-attribute">color</span> --&gt;
-<span class="hljs-selector-class">.btn-success</span> {
-  <span class="hljs-keyword">@include</span> button-variant(<span class="hljs-variable">$success-color</span>);
-}
+            <pre class="code" data-lang="Sass"><code><span class="token selector">&lt;!-- filled button with the success color -->
+.btn-success </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">button-variant</span><span class="token punctuation">(</span><span class="token variable">$success-color</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-&lt;!-- outlined <span class="hljs-selector-tag">button</span> with the success <span class="hljs-attribute">color</span> --&gt;
-<span class="hljs-selector-class">.btn-outline-success</span> {
-  <span class="hljs-keyword">@include</span> button-outline-variant(<span class="hljs-variable">$success-color</span>);
-}
+<span class="token selector">&lt;!-- outlined button with the success color -->
+.btn-outline-success </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">button-outline-variant</span><span class="token punctuation">(</span><span class="token variable">$success-color</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
             <h4 class="s-subtitle" id="variables-sizes">Variables - Sizes<a class="anchor" href="#variables-sizes" aria-hidden="true">#</a></h4>
             <p>The default REM (root em) size in Spectre.css is <code>20px</code>.</p>
@@ -387,19 +387,19 @@
             <p>Spectre uses <code>4px</code> as the unit size. Sizes of components are based on the unit size.</p>
             <h4 class="s-subtitle" id="variables-custom-prefix">Variables - Custom prefix<a class="anchor" href="#variables-custom-prefix" aria-hidden="true">#</a></h4>
             <p>There is also a way to add custom prefix to all CSS classes. You can use <a href="https://www.npmjs.com/package/gulp-css-prefix" target="_blank">gulp-css-prefix</a> plugin and add a new Gulp task to enable it.</p>
-            <pre class="code" data-lang="Bash"><code>npm install gulp-css-prefix
+            <pre class="code" data-lang="Bash"><code><span class="token function">npm</span> <span class="token function">install</span> gulp-css-prefix
 </code></pre>
             <p>To add <code>spectre-</code> to all classes, you can add the Gulp task to <code>gulpfile.js</code> file.</p>
-            <pre class="code"><code><span class="hljs-keyword">var</span> cssPrefix = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gulp-css-prefix'</span>);
+            <pre class="code"><code><span class="token keyword">var</span> cssPrefix <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-css-prefix'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">prefix</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">return</span> gulp
-    .src(<span class="hljs-string">'./dist/*.css'</span>)
-    .pipe(cssPrefix(<span class="hljs-string">'spectre-'</span>))
-    .pipe(gulp.dest(<span class="hljs-string">'./dist'</span>));
-}
+<span class="token keyword">function</span> <span class="token function">prefix</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> gulp
+    <span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'./dist/*.css'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">cssPrefix</span><span class="token punctuation">(</span><span class="token string">'spectre-'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'./dist'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-exports.prefix = prefix;
+exports<span class="token punctuation">.</span>prefix <span class="token operator">=</span> prefix<span class="token punctuation">;</span>
 </code></pre>
             <p>After you compile your version of Spectre in the /dist, run <code>gulp prefix</code> in the directory of Spectre.</p>
           </div>
