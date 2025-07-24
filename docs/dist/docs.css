@@ -1,6 +1,6 @@
 /*! Spectre.css Docs | MIT License | github.com/picturepan2/spectre */
 .version::after {
-  content: "0.5.10";
+  content: "0.5.9ws";
 }
 
 .off-canvas .off-canvas-toggle {
@@ -106,7 +106,7 @@
   }
   .docs-content .s-title::before,
   .docs-content .s-subtitle::before {
-    background: #f5f5f5;
+    background: #fff;
     bottom: 0;
     content: "";
     display: block;
@@ -142,7 +142,7 @@
   padding: 0.4rem;
 }
 .docs-content .docs-block.bg-gray {
-  background: rgb(215.9032258065, 213.2967741935, 213.2967741935);
+  background: rgb(237.35, 237.35, 237.35);
 }
 .docs-content .docs-shape {
   height: 4.8rem;
@@ -213,7 +213,7 @@
   align-items: center;
   background: #23b0ff;
   border-radius: 0.1rem;
-  color: #f5f5f5;
+  color: #fff;
   display: flex;
   font-size: 1.2rem;
   height: 2rem;
@@ -283,7 +283,7 @@
 }
 
 .docs-ad {
-  background: rgb(223.3064516129, 221.1935483871, 221.1935483871);
+  background: #f5f5f5;
   border-radius: 0.1rem;
   display: block;
   margin: 2rem 0;
@@ -407,7 +407,7 @@
   }
   .docs-navbar {
     backdrop-filter: blur(5px);
-    background: rgba(223.3064516129, 221.1935483871, 221.1935483871, 0.65);
+    background: rgba(245, 245, 245, 0.65);
     left: 0;
   }
   .docs-content {

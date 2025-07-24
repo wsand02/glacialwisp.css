@@ -1,5 +1,5 @@
 // Core variables
-$version: "0.5.10";
+$version: "0.5.9ws";
 
 // Core features
 $rtl: false !default;
@@ -14,7 +14,7 @@ $secondary-color-light: lighten($secondary-color, 3%) !default;
 
 // Gray colors
 $dark-color: #201e1e !default;
-$light-color: #f5f5f5 !default;
+$light-color: #fff !default;
 $gray-color: lighten($dark-color, 55%) !default;
 $gray-color-dark: darken($gray-color, 30%) !default;
 $gray-color-light: lighten($gray-color, 20%) !default;
@@ -22,7 +22,7 @@ $gray-color-light: lighten($gray-color, 20%) !default;
 $border-color: lighten($dark-color, 65%) !default;
 $border-color-dark: darken($border-color, 10%) !default;
 $border-color-light: lighten($border-color, 8%) !default;
-$bg-color: lighten($dark-color, 75%) !default;
+$bg-color: #f5f5f5 !default;
 $bg-color-dark: darken($bg-color, 3%) !default;
 $bg-color-light: $light-color !default;
 

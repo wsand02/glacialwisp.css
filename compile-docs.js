@@ -18,13 +18,17 @@ fs.readdirSync('./docs/src', {
     const filePath = path.join('./docs/src', file);
     const outputPath = path.join('./docs', file.replace('.pug', '.html'));
 
-    const compiledFunction = pug.compileFile(filePath, { pretty: true, filters: { 'highlight': (text, options) => {
-      const lang = options.lang || 'plaintext';
-      return Prism.highlight(text, Prism.languages[lang], lang);
-    },
-    'markdown-it': (text) => {
-      return md.render(text);
-    }} });
+    const compiledFunction = pug.compileFile(filePath, {
+      pretty: true, filters: {
+        'highlight': (text, options) => {
+          const lang = options.lang || 'plaintext';
+          return Prism.highlight(text, Prism.languages[lang], lang);
+        },
+        'markdown-it': (text) => {
+          return md.render(text);
+        }
+      }
+    });
     const html = compiledFunction();
 
     fs.writeFileSync(outputPath, html);
