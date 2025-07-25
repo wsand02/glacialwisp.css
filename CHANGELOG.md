@@ -10,3 +10,4 @@
 - Renamed to GlacialWisp to differentiate from Spectre.css
 - Jerryrig dark mode
 - Add primary gradient
+- Match doc and regular card border / shadow

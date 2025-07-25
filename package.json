@@ -1,6 +1,6 @@
 {
   "name": "glacialwisp.css",
-  "version": "0.5.10",
+  "version": "0.0.1",
   "main": "dist/glacialwisp.css",
   "scripts": {
     "css": "npm-run-all css-compile css-minify css-format",
