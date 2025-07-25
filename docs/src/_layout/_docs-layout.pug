@@ -7,21 +7,17 @@ block content
       a.off-canvas-toggle.btn.btn-link.btn-action(href='#sidebar')
         i.icon.icon-menu
       .btns.d-flex
-        input.docs-search.form-input(type="text" placeholder="Search Docs")
-        a.btn.ml-1(href='https://www.paypal.me/picturepan2' target='_blank') PayPal
-        a.btn.btn-primary.ml-1(href='https://github.com/picturepan2/spectre' target='_blank') GitHub
+        a.btn.btn-primary.ml-1(href='https://github.com/wsand02/spectre' target='_blank') GitHub
 
     #sidebar.docs-sidebar.off-canvas-sidebar
       .docs-brand
         if slug != parent
           a.docs-logo(href='../index.html')
-            img(src='../img/spectre-logo.svg' alt='Spectre.css CSS Framework')
-            h2 SPECTRE
+            h2 GLACIALWISP
             small.label.label-secondary.text-bold DOCS
         else
           a.docs-logo(href='index.html')
-            img(src='img/spectre-logo.svg' alt='Spectre.css CSS Framework')
-            h2 SPECTRE
+            h2 GLACIALWISP
             small.label.label-secondary.text-bold DOCS
       .docs-nav
         .accordion-container
@@ -29,8 +25,7 @@ block content
             'getting-started',
             'Getting started',
             {url: 'installation', name: 'Installation'},
-            {url: 'custom', name: 'Custom version'},
-            {url: 'browsers', name: 'Browser support'},
+            {url: 'darkmode', name: 'Dark mode'},
             {url: 'whatsnew', name: 'What\'s new'}
           )
           +docs-accordion(
@@ -109,12 +104,3 @@ block content
     .off-canvas-content
       #content.docs-content
         block docs-content
-
-  script(type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js")
-  script.
-    docsearch({ 
-    apiKey: 'bede06373c5a1fa3c1bbe8401e24c653', 
-    indexName: 'picturepan2_spectre', 
-    inputSelector: '.docs-search', 
-    debug: true
-    }); 

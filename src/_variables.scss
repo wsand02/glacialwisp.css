@@ -1,5 +1,5 @@
 // Core variables
-$version: "0.5.9";
+$version: "0.0.1";
 
 // Core features
 $rtl: false !default;
@@ -8,12 +8,13 @@ $rtl: false !default;
 $primary-color: #23b0ff !default;
 $primary-color-dark: darken($primary-color, 3%) !default;
 $primary-color-light: lighten($primary-color, 3%) !default;
+$primary-gradient: linear-gradient(#106992, #39eee9) !default;
 $secondary-color: lighten($primary-color, 37.5%) !default;
 $secondary-color-dark: darken($secondary-color, 3%) !default;
 $secondary-color-light: lighten($secondary-color, 3%) !default;
 
 // Gray colors
-$dark-color: #201e1e !default;
+$dark-color: #131111 !default;
 $light-color: #fff !default;
 $gray-color: lighten($dark-color, 55%) !default;
 $gray-color-dark: darken($gray-color, 30%) !default;
@@ -22,8 +23,10 @@ $gray-color-light: lighten($gray-color, 20%) !default;
 $border-color: lighten($dark-color, 65%) !default;
 $border-color-dark: darken($border-color, 10%) !default;
 $border-color-light: lighten($border-color, 8%) !default;
-$bg-color: lighten($dark-color, 75%) !default;
-$bg-color-dark: darken($bg-color, 3%) !default;
+$bg-color: #f5f5f5 !default;
+$bg-color-darker: darken($bg-color, 3%) !default;
+$bg-color-dark: #201e1e !default;
+$bg-color-lighter: lighten($bg-color-dark, 5%) !default;
 $bg-color-light: $light-color !default;
 
 // Control colors
@@ -39,6 +42,28 @@ $body-font-color: lighten($dark-color, 5%) !default;
 $link-color: $primary-color !default;
 $link-color-dark: darken($link-color, 10%) !default;
 $link-color-light: lighten($link-color, 10%) !default;
+
+html[data-theme="light"] {
+  --color-text: #{$body-font-color};
+  --color-body-background: #{$body-bg};
+  --color-background: #{$bg-color};
+  --color-background2: #{$bg-color-darker};
+  --color-link: #{$link-color};
+  --color-secondary: #{$secondary-color};
+  --color-primary: #{$primary-color};
+  --color-shadow: #{toRGB($dark-color)};
+}
+
+html[data-theme="dark"] {
+  --color-text: #{$gray-color-light};
+  --color-body-background: #{$dark-color};
+  --color-background: #{$bg-color-dark};
+  --color-background2: #{$bg-color-lighter};
+  --color-link: #{$link-color-light};
+  --color-secondary: #{$secondary-color-dark};
+  --color-primary: #{$primary-color-dark};
+  --color-shadow: #{toRGB($light-color)};
+}
 
 // Fonts
 // Credit: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
@@ -79,7 +104,7 @@ $line-height: 1.2rem !default;
 $layout-spacing: $unit-2 !default;
 $layout-spacing-sm: $unit-1 !default;
 $layout-spacing-lg: $unit-4 !default;
-$border-radius: $unit-h !default;
+$border-radius: $unit-o !default;
 $border-width: $unit-o !default;
 $border-width-lg: $unit-h !default;
 $control-size: $unit-9 !default;

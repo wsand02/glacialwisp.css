@@ -1,7 +1,8 @@
 // Chips
 .chip {
   align-items: center;
-  background: $bg-color-dark;
+  background: var(--color-background);
+  color: var(--color-text);
   border-radius: 5rem;
   display: inline-flex;
   font-size: 90%;

@@ -12,7 +12,7 @@
   &.table-striped {
     tbody {
       tr:nth-of-type(odd) {
-        background: $bg-color;
+        background: var(--color-background);
       }
     }
   }
@@ -22,7 +22,7 @@
     tbody {
       tr {
         &.active {
-          background: $bg-color-dark;
+          background: var(--color-background);
         }
       }
     }
@@ -32,7 +32,7 @@
     tbody {
       tr {
         &:hover {
-          background: $bg-color-dark;
+          background: var(--color-background2);
         }
       }
     }

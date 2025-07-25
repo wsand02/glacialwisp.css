@@ -9,6 +9,19 @@
   }
 }
 
+@mixin bg-gradient-variant($name: ".bg-primary-gradient", $color: $primary-color) {
+  #{$name} {
+    background: $color !important;
+  }
+}
+
+@mixin bg-dynamic-color-variant($selector, $color) {
+  #{$selector} {
+    background-color: var(#{$color}) !important;
+    color: var(#{--color-text});
+  }
+}
+
 // Text color utility mixin
 @mixin text-color-variant($name: ".text-primary", $color: $primary-color) {
   #{$name} {
@@ -23,5 +36,11 @@
     &:visited {
       color: lighten($color, 5%);
     }
+  }
+}
+
+@mixin text-color-variant-dynamic($name: ".text-primary", $color: "--color-text") {
+  #{$name} {
+    color: var(#{$color});
   }
 }

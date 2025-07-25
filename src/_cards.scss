@@ -1,6 +1,6 @@
 // Cards
 .card {
-  background: $bg-color-light;
+  background: var(--color-background);
   border: $border-width solid $border-color;
   border-radius: $border-radius;
   display: flex;

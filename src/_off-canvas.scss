@@ -22,7 +22,7 @@ $off-canvas-breakpoint: $size-lg !default;
   }
 
   .off-canvas-sidebar {
-    background: $bg-color;
+    background: var(--color-background);;
     bottom: 0;
     min-width: 10rem;
     overflow-y: auto;

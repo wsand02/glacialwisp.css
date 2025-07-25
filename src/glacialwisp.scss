@@ -1,11 +1,13 @@
 // Variables and mixins
+@import "functions";
 @import "variables";
 @import "mixins";
 
-/*! Spectre.css v#{$version} | MIT License | github.com/picturepan2/spectre */
+/*! GlacialWisp.css v#{$version} | MIT License | github.com/wsand02/glacialwisp.css */
 // Reset and dependencies
 @import "normalize";
 @import "base";
+@import "xonokai";
 
 // Elements
 @import "typography";
@@ -14,7 +16,7 @@
 @import "buttons";
 @import "forms";
 @import "labels";
-@import "codes";
+//@import "codes";
 @import "media";
 
 // Layout

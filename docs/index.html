@@ -1,39 +1,74 @@
 <!DOCTYPE html>
+<script>
+  function getTheme() {
+    if (localStorage.getItem("userTheme") != null) {
+      return localStorage.getItem("userTheme");
+    }
+    if (window.matchMedia) {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+        return 'light';
+      }
+    }
+    // fallback
+    return 'light';
+  }
+  window.getTheme = getTheme;
+  
+  function changeTheme() {
+    document.documentElement.setAttribute(
+      'data-theme',
+      window.getTheme() == 'dark' ? 'dark' : 'light'
+    );
+  }
+  window.changeTheme = changeTheme;
+  
+  function setTheme(theme) {
+    if (theme == 'dark') {
+      localStorage.setItem("userTheme", "dark");
+    } else if (theme == 'light') {
+      localStorage.setItem("userTheme", "light");
+    }
+    window.changeTheme();
+  }
+  window.setTheme = setTheme;
+  
+  (function() {
+    setTheme(getTheme());
+  })();
+</script>
 <html lang="en">
   <head>
-    <title>Spectre.css CSS Framework</title>
+    <title>GlacialWisp.css CSS Framework</title>
     <meta charset="utf-8">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Spectre.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. Spectre provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
-    <meta name="author" content="Yan Zhu">
-    <meta property="og:url" content="https://picturepan2.github.io/spectre/">
-    <meta property="og:title" content="Spectre.css CSS Framework">
-    <meta property="og:description" content="Spectre.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. Spectre provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@spectrecss">
-    <meta name="twitter:creator" content="@picturepan2">
+    <meta name="description" content="GlacialWisp.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. GlacialWisp provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
+    <meta property="og:url" content="https://wsand02.github.io/glacialwisp/">
+    <meta property="og:title" content="GlacialWisp.css CSS Framework">
+    <meta property="og:description" content="GlacialWisp.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. GlacialWisp provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
     <link rel="shortcut icon" href="img/favicons/favicon.ico">
     <link rel="icon" href="img/favicons/favicon.png">
-    <link rel="stylesheet" href="dist/spectre.min.css">
-    <link rel="stylesheet" href="dist/spectre-icons.min.css">
-    <link rel="stylesheet" href="dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="dist/glacialwisp.min.css">
+    <link rel="stylesheet" href="dist/glacialwisp-icons.min.css">
+    <link rel="stylesheet" href="dist/glacialwisp-exp.min.css">
     <link rel="stylesheet" href="dist/docs.min.css">
-    <link rel="canonical" href="https://picturepan2.github.io/spectre/">
+    <link rel="canonical" href="https://wsand02.github.io/glacialwisp/">
   </head>
   <body>
     <div class="section section-hero bg-gray">
       <div class="grid-hero container grid-lg text-center" id="overview">
-        <div class="docs-brand"><a class="docs-logo" href="index.html"><img src="img/spectre-logo.svg" alt="Spectre.css CSS Framework">
-            <h2>SPECTRE</h2></a></div>
-        <h1>SPECTRE.CSS</h1>
+        <div class="docs-brand"><a class="docs-logo" href="index.html">
+            <h2>GLACIALWISP</h2></a></div>
+        <h1>GlacialWisp.css</h1>
         <h2>A 
           <u>Lightweight</u>, 
           <u>Responsive</u> and 
           <u>Modern</u> CSS Framework
         </h2>
-        <p><a class="btn btn-primary btn-lg mr-2" href="getting-started.html">Docs</a><a class="btn btn-primary btn-lg" href="https://github.com/picturepan2/spectre" target="_blank">GitHub</a></p>
+        <p><a class="btn btn-primary btn-lg mr-2" href="getting-started.html">Docs</a><a class="btn btn-primary btn-lg" href="https://github.com/wsand02/glacialwisp.css" target="_blank">GitHub</a></p>
         <p class="text-gray">Latest version: <span class="version"></span></p>
         <div class="columns">
           <div class="column col-4 col-xs-12">
@@ -57,79 +92,68 @@
         </div>
       </div>
     </div>
-    <div class="section section-ads bg-gray">
-      <div class="docs-ad">
-        <div class="hide-md text-center">
-          <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <!-- GitHub-lg--><ins class="adsbygoogle mx-auto" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-2225124559530218" data-ad-slot="9894180784"></ins>
-          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-        <div class="show-md text-center">
-          <!-- GitHub-sm--><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-2225124559530218" data-ad-slot="9278881734"></ins>
-          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-      </div>
-    </div>
-    <div class="section section-features bg-primary text-light text-center">
+    <div class="section section-features bg-primary-gradient text-light text-center">
       <div class="container grid-lg">
         <h2>Introduction</h2>
         <div class="columns">
           <div class="column col-10 col-sm-12 col-mx-auto text-left">
-            <p class="text-secondary"><strong>Spectre.css </strong>is a lightweight, responsive and modern CSS framework for faster and extensible development.</p>
-            <p class="text-secondary">Spectre provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.</p>
+            <p class="text-secondary"><strong>GlacialWisp.css </strong>is a lightweight, responsive and modern CSS framework for faster and extensible development.</p>
+            <p class="text-secondary">GlacialWisp provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.</p>
           </div>
-          <div class="column col-10 col-sm-12 col-mx-auto"><a class="btn btn-lg" href="getting-started/installation.html">Install Spectre.css</a></div>
+          <div class="column col-10 col-sm-12 col-mx-auto"><a class="btn btn-lg" href="getting-started/installation.html">Install GlacialWisp.css</a></div>
         </div>
       </div>
     </div>
-    <div class="section section-updates bg-gray">
-      <div class="container grid-lg">
-        <div class="columns">
-          <div class="column col-4 col-xs-12">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title h6">Spectre Twitter</div>
-              </div>
-              <div class="card-body">For the latest announcements and updates, follow on Twitter: <a href="https://twitter.com/spectrecss" target="_blank">@spectrecss</a>.</div>
-              <div class="card-footer"><a class="btn btn-primary" href="https://twitter.com/spectrecss" target="_blank">Follow</a></div>
-            </div>
-          </div>
-          <div class="column col-4 col-xs-12">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title h6">PayPal Donate</div>
-              </div>
-              <div class="card-body">Spectre.css is completely free to use. If you enjoy it, please consider donating for the further development.</div>
-              <div class="card-footer"><a class="btn btn-primary" href="https://www.paypal.me/picturepan2" target="_blank">Donate</a></div>
-            </div>
-          </div>
-          <div class="column col-4 col-xs-12">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-title h6">Sponsor via Patreon</div>
-              </div>
-              <div class="card-body">Your name or company logo will be put on Spectre Docs homepage.</div>
-              <div class="card-footer"><a class="btn btn-primary" href="https://www.patreon.com/spectrecss" target="_blank">Sponsor</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section section-ads bg-gray"></div>
     <footer class="section section-footer">
       <div class="docs-footer container grid-lg" id="copyright">
-        <p><a href="https://github.com/picturepan2/spectre" target="_blank">GitHub</a> · <a href="https://twitter.com/spectrecss" target="_blank">Twitter</a> · <a href="https://www.paypal.me/picturepan2" target="_blank">PayPal Donate</a> · <a href="https://www.patreon.com/spectrecss" target="_blank">Patreon Sponsor</a> · Version <span class="version"></span></p>
-        <p>Designed and built with <span class="text-error">&hearts;</span> by <a href="https://twitter.com/picturepan2" target="_blank">Yan Zhu</a>. Licensed under the <a href="https://github.com/picturepan2/spectre/blob/master/LICENSE" target="_blank">MIT License</a>.</p>
+        <p><a href="https://github.com/wsand02/glacialwisp.css" target="_blank">GitHub</a> · Version <span class="version"></span></p>
+        <div class="columns"> 
+          <div class="column"> 
+            <p>Originally designed and built with <span class="text-error">&hearts;</span> by <a href="https://twitter.com/picturepan2" target="_blank">Yan Zhu</a>. Licensed under the <a href="https://github.com/wsand02/glacialwisp.css/blob/master/LICENSE" target="_blank">MIT License</a>. Modified by <a href="https://wilsandbrink.com" target="_blank">William Sandbrink</a>.</p>
+          </div>
+          <div class="column">
+            <div class="form-group float-right" id="theme-switch-wrapper">
+              <noscript>
+                <Changing>color scheme dynamically requires JavaScript.</Changing>
+              </noscript>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-2702768-8', 'auto');
-      ga('send', 'pageview');
+      'use strict';
+      window.addEventListener('load', () => {
+        let themeSwitchWrapper = document.getElementById('theme-switch-wrapper');
+        let themeSwitch = document.createElement('label');
+        themeSwitch.classList.add('form-switch');
+        themeSwitch.innerHTML = `
+        <input type="checkbox">
+        <i class="form-icon"></i><span id="theme-switch-label">Dark mode</span>
+        `;
+        themeSwitchWrapper.appendChild(themeSwitch);
+        let checkbox = themeSwitchWrapper.querySelector('input[type="checkbox"]');
+        // set default
+        if (window.getTheme() == 'dark') {
+          checkbox.checked = true;
+        } else {
+          checkbox.checked = false;
+        }
+        checkbox.addEventListener('click', (e) => {
+          window.setTheme(e.target.checked ? 'dark' : 'light');
+        });
+        window
+          .matchMedia('(prefers-color-scheme: dark)')
+          .addEventListener('change', (e) => {
+            if (localStorage.getItem('userTheme') == null) {
+              if (e.matches) {
+                window.setTheme('dark');
+              } else {
+                window.setTheme('light');
+              }
+            }
+          });
+        });
     </script>
   </body>
 </html>

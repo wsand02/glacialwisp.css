@@ -1,6 +1,7 @@
 // Toasts
 .toast {
-  @include toast-variant($dark-color);
+  background-color: var(--color-background2);
+  border-color: var(--color-background2);
   border: $border-width solid $dark-color;
   border-radius: $border-radius;
   color: $light-color;

@@ -19,7 +19,7 @@
     z-index: $zindex-4;
 
     .modal-overlay {
-      background: rgba($bg-color, .75);
+      background: rgba($dark-color, .75);
       bottom: 0;
       cursor: default;
       display: block;
@@ -44,7 +44,7 @@
 
   &.modal-lg {
     .modal-overlay {
-      background: $bg-color-light;
+      background: var(--color-background2);
     }
 
     .modal-container {
@@ -56,7 +56,7 @@
 
 .modal-container {
   @include shadow-variant(.2rem);
-  background: $bg-color-light;
+  background: var(--color-background2);
   border-radius: $border-radius;
   display: flex;
   flex-direction: column;
@@ -70,7 +70,6 @@
   }
 
   .modal-header {
-    color: $dark-color;
     padding: $unit-4;
   }
 

@@ -7,7 +7,7 @@
 
   .nav-item {
     a {
-      color: $gray-color-dark;
+      color: var(--color-text);
       padding: $unit-1 $unit-2;
       text-decoration: none;
       &:focus,
@@ -17,7 +17,7 @@
     }
     &.active {
       & > a {
-        color: darken($gray-color-dark, 10%);
+        color: $primary-color;
         font-weight: bold;
         &:focus,
         &:hover {
