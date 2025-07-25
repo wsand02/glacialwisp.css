@@ -3,20 +3,22 @@ html[data-theme="light"] {
   --color-text: rgb(32.4583333333, 29.0416666667, 29.0416666667);
   --color-body-background: #fff;
   --color-background: #f5f5f5;
+  --color-background2: rgb(237.35, 237.35, 237.35);
   --color-link: #23b0ff;
   --color-secondary: rgb(226.25, 244.6761363636, 255);
   --color-primary: #23b0ff;
-  --color-shadow: rgb(19, 17, 17);
+  --color-shadow: 19, 17, 17;
 }
 
 html[data-theme="dark"] {
   --color-text: rgb(211.7916666667, 206.7083333333, 206.7083333333);
   --color-body-background: #131111;
   --color-background: #201e1e;
+  --color-background2: rgb(45.1612903226, 42.3387096774, 42.3387096774);
   --color-link: rgb(86, 194.3136363636, 255);
   --color-secondary: rgb(210.95, 239.1820454545, 255);
   --color-primary: rgb(19.7, 170.5059090909, 255);
-  --color-shadow: rgb(255, 255, 255);
+  --color-shadow: 255, 255, 255;
 }
 
 /*! GlacialWisp.css v0.0.1 | MIT License | github.com/wsand02/glacialwisp.css */
@@ -693,7 +695,7 @@ abbr[title] {
 }
 
 kbd {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   line-height: 1.25;
   padding: 0.1rem 0.2rem;
   background: #131111;
@@ -705,7 +707,7 @@ mark {
   background: #ffe9b3;
   color: rgb(32.4583333333, 29.0416666667, 29.0416666667);
   border-bottom: 0.05rem solid rgb(255, 210.8552631579, 102.5);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   padding: 0.05rem 0.1rem 0;
 }
 
@@ -831,14 +833,14 @@ html:lang(ko),
   text-align: left;
 }
 .table.table-striped tbody tr:nth-of-type(odd) {
-  background: #f5f5f5;
+  background: var(--color-background);
 }
 .table tbody tr.active,
 .table.table-striped tbody tr.active {
-  background: #201e1e;
+  background: var(--color-background);
 }
 .table.table-hover tbody tr:hover {
-  background: #201e1e;
+  background: var(--color-background2);
 }
 .table.table-scroll {
   display: block;
@@ -858,9 +860,9 @@ html:lang(ko),
 
 .btn {
   appearance: none;
-  background: #fff;
+  background: var(--color-background);
   border: 0.05rem solid #23b0ff;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   color: #23b0ff;
   cursor: pointer;
   display: inline-block;
@@ -1101,8 +1103,9 @@ legend {
   background: var(--color-body-background);
   background-image: none;
   border: 0.05rem solid rgb(163.625, 152.875, 152.875);
-  border-radius: 0.1rem;
-  color: rgb(32.4583333333, 29.0416666667, 29.0416666667);
+  border-radius: 0.05rem;
+  color: var(--color-text);
+  border-color: var(--color-background2);
   display: block;
   font-size: 0.8rem;
   height: 1.8rem;
@@ -1167,7 +1170,7 @@ textarea.form-input.input-sm {
 .form-select {
   appearance: none;
   border: 0.05rem solid rgb(163.625, 152.875, 152.875);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   color: inherit;
   font-size: 0.8rem;
   height: 1.8rem;
@@ -1312,7 +1315,7 @@ textarea.form-input.input-sm {
 }
 
 .form-checkbox .form-icon {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
 }
 .form-checkbox input:checked + .form-icon::before {
   background-clip: padding-box;
@@ -1402,7 +1405,7 @@ textarea.form-input.input-sm {
 .input-group .input-group-addon {
   background: #f5f5f5;
   border: 0.05rem solid rgb(163.625, 152.875, 152.875);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   line-height: 1.2rem;
   padding: 0.25rem 0.4rem;
   white-space: nowrap;
@@ -1567,11 +1570,11 @@ input.disabled + .form-icon {
 }
 
 .label {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   line-height: 1.25;
   padding: 0.1rem 0.2rem;
-  background: #201e1e;
-  color: rgb(45.9166666667, 41.0833333333, 41.0833333333);
+  background-color: var(--color-background);
+  color: var(--color-text);
   display: inline-block;
 }
 .label.label-rounded {
@@ -2329,7 +2332,7 @@ summary.accordion-header::-webkit-details-marker {
   padding: 0.2rem 0;
 }
 .breadcrumb .breadcrumb-item {
-  color: rgb(86.2916666667, 77.2083333333, 77.2083333333);
+  color: var(--color-text);
   display: inline-block;
   margin: 0;
   padding: 0.2rem 0;
@@ -2338,17 +2341,17 @@ summary.accordion-header::-webkit-details-marker {
   margin-right: 0.2rem;
 }
 .breadcrumb .breadcrumb-item:not(:last-child) a {
-  color: rgb(86.2916666667, 77.2083333333, 77.2083333333);
+  color: var(--color-text);
 }
 .breadcrumb .breadcrumb-item:not(:first-child)::before {
-  color: rgb(86.2916666667, 77.2083333333, 77.2083333333);
+  color: var(--color-text);
   content: "/";
   padding-right: 0.4rem;
 }
 
 .bar {
   background: #201e1e;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   display: flex;
   flex-wrap: nowrap;
   height: 0.8rem;
@@ -2370,12 +2373,12 @@ summary.accordion-header::-webkit-details-marker {
   width: 0;
 }
 .bar .bar-item:first-child {
-  border-bottom-left-radius: 0.1rem;
-  border-top-left-radius: 0.1rem;
+  border-bottom-left-radius: 0.05rem;
+  border-top-left-radius: 0.05rem;
 }
 .bar .bar-item:last-child {
-  border-bottom-right-radius: 0.1rem;
-  border-top-right-radius: 0.1rem;
+  border-bottom-right-radius: 0.05rem;
+  border-top-right-radius: 0.05rem;
   flex-shrink: 1;
 }
 
@@ -2412,7 +2415,7 @@ summary.accordion-header::-webkit-details-marker {
 .card {
   background: var(--color-background);
   border: 0.05rem solid rgb(187.7083333333, 179.7916666667, 179.7916666667);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   display: flex;
   flex-direction: column;
 }
@@ -2437,12 +2440,12 @@ summary.accordion-header::-webkit-details-marker {
   padding-top: 0;
 }
 .card .card-image:first-child img {
-  border-top-left-radius: 0.1rem;
-  border-top-right-radius: 0.1rem;
+  border-top-left-radius: 0.05rem;
+  border-top-right-radius: 0.05rem;
 }
 .card .card-image:last-child img {
-  border-bottom-left-radius: 0.1rem;
-  border-bottom-right-radius: 0.1rem;
+  border-bottom-left-radius: 0.05rem;
+  border-bottom-right-radius: 0.05rem;
 }
 
 .chip {
@@ -2499,14 +2502,14 @@ summary.accordion-header::-webkit-details-marker {
   display: block;
 }
 .dropdown .btn-group .dropdown-toggle:nth-last-child(2) {
-  border-bottom-right-radius: 0.1rem;
-  border-top-right-radius: 0.1rem;
+  border-bottom-right-radius: 0.05rem;
+  border-top-right-radius: 0.05rem;
 }
 
 .empty {
-  background: #f5f5f5;
-  border-radius: 0.1rem;
-  color: rgb(86.2916666667, 77.2083333333, 77.2083333333);
+  background: var(--color-background);
+  border-radius: 0.05rem;
+  color: var(--color-text);
   text-align: center;
   padding: 3.2rem 1.6rem;
 }
@@ -2523,8 +2526,8 @@ summary.accordion-header::-webkit-details-marker {
 
 .menu {
   box-shadow: 0 0.05rem 0.2rem rgba(var(--color-shadow), 0.3);
-  background: var(--color-body-background);
-  border-radius: 0.1rem;
+  background: var(--color-background2);
+  border-radius: 0.05rem;
   list-style: none;
   margin: 0;
   min-width: 180px;
@@ -2543,7 +2546,7 @@ summary.accordion-header::-webkit-details-marker {
   text-decoration: none;
 }
 .menu .menu-item > a {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   color: inherit;
   display: block;
   margin: 0 -0.4rem;
@@ -2601,7 +2604,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 .modal:target .modal-overlay,
 .modal.active .modal-overlay {
-  background: rgba(245, 245, 245, 0.75);
+  background: rgba(19, 17, 17, 0.75);
   bottom: 0;
   cursor: default;
   display: block;
@@ -2620,7 +2623,7 @@ summary.accordion-header::-webkit-details-marker {
   padding: 0 0.4rem;
 }
 .modal.modal-lg .modal-overlay {
-  background: #fff;
+  background: var(--color-background2);
 }
 .modal.modal-lg .modal-container {
   box-shadow: none;
@@ -2629,8 +2632,8 @@ summary.accordion-header::-webkit-details-marker {
 
 .modal-container {
   box-shadow: 0 0.2rem 0.5rem rgba(var(--color-shadow), 0.3);
-  background: #fff;
-  border-radius: 0.1rem;
+  background: var(--color-background2);
+  border-radius: 0.05rem;
   display: flex;
   flex-direction: column;
   max-height: 75vh;
@@ -2642,7 +2645,6 @@ summary.accordion-header::-webkit-details-marker {
   max-height: 100vh;
 }
 .modal-container .modal-header {
-  color: #131111;
   padding: 0.8rem;
 }
 .modal-container .modal-body {
@@ -2662,7 +2664,7 @@ summary.accordion-header::-webkit-details-marker {
   margin: 0.2rem 0;
 }
 .nav .nav-item a {
-  color: rgb(86.2916666667, 77.2083333333, 77.2083333333);
+  color: var(--color-text);
   padding: 0.2rem 0.4rem;
   text-decoration: none;
 }
@@ -2671,7 +2673,7 @@ summary.accordion-header::-webkit-details-marker {
   color: #23b0ff;
 }
 .nav .nav-item.active > a {
-  color: rgb(59.375, 53.125, 53.125);
+  color: #23b0ff;
   font-weight: bold;
 }
 .nav .nav-item.active > a:focus,
@@ -2697,7 +2699,7 @@ summary.accordion-header::-webkit-details-marker {
   padding: 0.2rem 0.2rem;
 }
 .pagination .page-item a {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   display: inline-block;
   padding: 0.2rem 0.4rem;
   text-decoration: none;
@@ -2732,7 +2734,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .panel {
   border: 0.05rem solid rgb(187.7083333333, 179.7916666667, 179.7916666667);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   display: flex;
   flex-direction: column;
 }
@@ -2947,10 +2949,10 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .toast {
-  background: rgba(19, 17, 17, 0.95);
-  border-color: #131111;
+  background-color: var(--color-background2);
+  border-color: var(--color-background2);
   border: 0.05rem solid #131111;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   color: #fff;
   display: block;
   padding: 0.4rem;
@@ -2994,7 +2996,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 .tooltip::after {
   background: rgba(19, 17, 17, 0.95);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   bottom: 100%;
   color: #fff;
   content: attr(data-tooltip);
@@ -3084,15 +3086,7 @@ a.text-primary:visited {
 }
 
 .text-secondary {
-  color: rgb(210.95, 239.1820454545, 255) !important;
-}
-
-a.text-secondary:focus,
-a.text-secondary:hover {
-  color: rgb(185.45, 230.0252272727, 255);
-}
-a.text-secondary:visited {
-  color: rgb(236.45, 248.3388636364, 255);
+  color: var(--color-secondary);
 }
 
 .text-gray {
@@ -3173,7 +3167,8 @@ a.text-error:visited {
 }
 
 .bg-secondary {
-  background: rgb(226.25, 244.6761363636, 255) !important;
+  background-color: var(--color-secondary) !important;
+  color: var(--color-text);
 }
 
 .bg-dark {
@@ -3199,6 +3194,10 @@ a.text-error:visited {
 .bg-error {
   background: #e85600 !important;
   color: #fff;
+}
+
+.bg-primary-gradient {
+  background: linear-gradient(#106992, #39eee9) !important;
 }
 
 .c-hand {
@@ -3285,7 +3284,7 @@ a.text-error:visited {
 }
 .divider[data-content]::after,
 .divider-vert[data-content]::after {
-  background: #fff;
+  background: var(--color-body-background);
   color: rgb(163.625, 152.875, 152.875);
   content: attr(data-content);
   display: inline-block;
@@ -3585,7 +3584,7 @@ a.text-error:visited {
 }
 
 .s-rounded {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
 }
 
 .s-circle {

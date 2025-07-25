@@ -1,4 +1,4 @@
-#### Spectre.css Changelog
+#### GlacialWisp.css Changelog
 
 ##### v0.0.1 
 
@@ -9,3 +9,4 @@
 - Removed bloat
 - Renamed to GlacialWisp to differentiate from Spectre.css
 - Jerryrig dark mode
+- Add primary gradient
