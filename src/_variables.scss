@@ -62,7 +62,7 @@ html[data-theme="dark"] {
   --color-link: #{$link-color-light};
   --color-secondary: #{$secondary-color-dark};
   --color-primary: #{$primary-color-dark};
-  --color-shadow: #{toRGB($light-color)};
+  --color-shadow: #{toRGB($secondary-color-dark)};
 }
 
 // Fonts

@@ -18,7 +18,7 @@ html[data-theme="dark"] {
   --color-link: rgb(86, 194.3136363636, 255);
   --color-secondary: rgb(210.95, 239.1820454545, 255);
   --color-primary: rgb(19.7, 170.5059090909, 255);
-  --color-shadow: 255, 255, 255;
+  --color-shadow: 211, 239, 255;
 }
 
 /*! GlacialWisp.css v0.0.1 | MIT License | github.com/wsand02/glacialwisp.css */
@@ -2414,7 +2414,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .card {
   background: var(--color-background);
-  border: 0.05rem solid rgb(187.7083333333, 179.7916666667, 179.7916666667);
+  box-shadow: 0 0.05rem 0.2rem rgba(var(--color-shadow), 0.3);
   border-radius: 0.05rem;
   display: flex;
   flex-direction: column;
