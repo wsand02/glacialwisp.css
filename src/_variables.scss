@@ -1,5 +1,5 @@
 // Core variables
-$version: "0.6.0";
+$version: "0.0.1";
 
 // Core features
 $rtl: false !default;
@@ -23,7 +23,9 @@ $border-color: lighten($dark-color, 65%) !default;
 $border-color-dark: darken($border-color, 10%) !default;
 $border-color-light: lighten($border-color, 8%) !default;
 $bg-color: #f5f5f5 !default;
-$bg-color-dark: darken($bg-color, 3%) !default;
+$bg-color-darker: darken($bg-color, 3%) !default;
+$bg-color-dark: #201e1e !default;
+$bg-color-lighter: lighten($bg-color-dark, 5%) !default;
 $bg-color-light: $light-color !default;
 
 // Control colors
@@ -44,14 +46,22 @@ html[data-theme="light"] {
   --color-text: #{$body-font-color};
   --color-body-background: #{$body-bg};
   --color-background: #{$bg-color};
+  --color-background2: #{$bg-color-darker};
   --color-link: #{$link-color};
+  --color-secondary: #{$secondary-color};
+  --color-primary: #{$primary-color};
+  --color-shadow: #{toRGB($dark-color)};
 }
 
 html[data-theme="dark"] {
   --color-text: #{$gray-color-light};
   --color-body-background: #{$dark-color};
-  --color-background: #201e1e;
+  --color-background: #{$bg-color-dark};
+  --color-background2: #{$bg-color-lighter};
   --color-link: #{$link-color-light};
+  --color-secondary: #{$secondary-color-dark};
+  --color-primary: #{$primary-color-dark};
+  --color-shadow: #{toRGB($light-color)};
 }
 
 // Fonts

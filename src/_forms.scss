@@ -35,11 +35,12 @@ legend {
 // Form element: Input
 .form-input {
   appearance: none;
-  background: $bg-color-light;
+  background: var(--color-body-background);
   background-image: none;
   border: $border-width solid $border-color-dark;
   border-radius: $border-radius;
-  color: $body-font-color;
+  color: var(--color-text);
+  border-color: var(--color-background2);
   display: block;
   font-size: $font-size;
   height: $control-size;

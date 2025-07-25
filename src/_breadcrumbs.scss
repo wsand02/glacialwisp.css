@@ -5,7 +5,7 @@
   padding: $unit-1 0;
 
   .breadcrumb-item {
-    color: $gray-color-dark;
+    color: var(--color-text);
     display: inline-block;
     margin: 0;
     padding: $unit-1 0;
@@ -14,13 +14,13 @@
       margin-right: $unit-1;
 
       a {
-        color: $gray-color-dark;
+        color: var(--color-text);
       }
     }
 
     &:not(:first-child) {
       &::before {
-        color: $gray-color-dark;
+        color: var(--color-text);
         content: "/";
         padding-right: $unit-2;
       }

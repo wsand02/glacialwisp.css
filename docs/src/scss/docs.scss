@@ -1,5 +1,6 @@
 /*! GlacialWisp.css Docs | MIT License | github.com/wsand02/glacialwisp.css */
 // Core variables and mixins
+@import "../../../src/functions";
 @import "../../../src/variables";
 @import "../../../src/mixins";
 
@@ -39,7 +40,6 @@
     position: absolute;
     right: 1.5rem;
     top: 1rem;
-    width: 14rem;
   }
 }
 
@@ -324,7 +324,6 @@
       font-weight: 700;
       line-height: 1.5rem;
       margin-bottom: 0;
-      margin-left: .5rem;
       margin-right: .3rem;
     }
   }
@@ -335,44 +334,13 @@
   padding: .5rem;
 
   a {
-    color: $gray-color-dark;
+    color: var(--color-text);
   }
 
   .form-switch {
     margin-top: 0;
     padding-top: 0;
     padding-right: 0.1rem;
-  }
-}
-
-.docs-ad {
-  background: $bg-color;
-  border-radius: $border-radius;
-  display: block;
-  margin: 2rem 0;
-  padding: $layout-spacing;
-  position: relative;
-
-  ins {
-    line-height: 1;
-    vertical-align: middle;
-  }
-
-  .carbon-wrap {
-    .carbon-img {
-      display: block;
-    }
-  
-    .carbon-text {
-      color: $gray-color-dark;
-      display: block;
-      font-size: $font-size-sm;
-    }
-  }
-  
-  .carbon-poweredby {
-    color: $gray-color;
-    font-size: $font-size-sm;
   }
 }
 

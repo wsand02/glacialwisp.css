@@ -1,7 +1,7 @@
 // Buttons
 .btn {
   appearance: none;
-  background: $bg-color-light;
+  background: var(--color-background);
   border: $border-width solid $primary-color;
   border-radius: $border-radius;
   color: $primary-color;

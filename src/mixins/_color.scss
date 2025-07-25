@@ -9,9 +9,9 @@
   }
 }
 
-@mixin bg-dynamic-color-variant($selector, $css-var-name) {
+@mixin bg-dynamic-color-variant($selector, $color) {
   #{$selector} {
-    background-color: var(#{$css-var-name}) !important;
+    background-color: var(#{$color}) !important;
     color: var(#{--color-text});
   }
 }
@@ -30,5 +30,11 @@
     &:visited {
       color: lighten($color, 5%);
     }
+  }
+}
+
+@mixin text-color-variant-dynamic($name: ".text-primary", $color: "--color-text") {
+  #{$name} {
+    color: var(#{$color});
   }
 }

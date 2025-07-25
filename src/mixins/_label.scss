@@ -9,3 +9,8 @@
   background: $bg-color;
   color: $color;
 }
+
+@mixin label-variant-dynamic($color, $bg-color) {
+  background-color: var(#{$bg-color});
+  color: var(#{$color});
+}
