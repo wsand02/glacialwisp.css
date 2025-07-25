@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<script>
+  function getTheme() {
+    if (localStorage.getItem("userTheme") != null) {
+      return localStorage.getItem("userTheme");
+    }
+    if (window.matchMedia) {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+        return 'light';
+      }
+    }
+    // fallback
+    return 'light';
+  }
+  window.getTheme = getTheme;
+  
+  function changeTheme() {
+    document.documentElement.setAttribute(
+      'data-theme',
+      window.getTheme() == 'dark' ? 'dark' : 'light'
+    );
+  }
+  window.changeTheme = changeTheme;
+  
+  function setTheme(theme) {
+    if (theme == 'dark') {
+      localStorage.setItem("userTheme", "dark");
+    } else if (theme == 'light') {
+      localStorage.setItem("userTheme", "light");
+    }
+    window.changeTheme();
+  }
+  window.setTheme = setTheme;
+  
+  (function() {
+    setTheme(getTheme());
+  })();
+</script>
+<html lang="en">
+  <head>
+    <title>Dark mode - Getting started - GlacialWisp.css CSS Framework</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="GlacialWisp.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. GlacialWisp provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
+    <meta property="og:url" content="https://wsand02.github.io/glacialwisp/getting-started/dark-mode.html">
+    <meta property="og:title" content="Dark mode - Getting started - GlacialWisp.css CSS Framework">
+    <meta property="og:description" content="GlacialWisp.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. GlacialWisp provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.">
+    <link rel="shortcut icon" href="../img/favicons/favicon.ico">
+    <link rel="icon" href="../img/favicons/favicon.png">
+    <link rel="stylesheet" href="../dist/glacialwisp.min.css">
+    <link rel="stylesheet" href="../dist/glacialwisp-icons.min.css">
+    <link rel="stylesheet" href="../dist/glacialwisp-exp.min.css">
+    <link rel="stylesheet" href="../dist/docs.min.css">
+    <link rel="canonical" href="https://wsand02.github.io/glacialwisp/getting-started/dark-mode.html">
+  </head>
+  <body>
+    <div class="docs-container off-canvas off-canvas-sidebar-show">
+      <div class="docs-navbar"><a class="off-canvas-toggle btn btn-link btn-action" href="#sidebar"><i class="icon icon-menu"></i></a>
+        <div class="btns d-flex"><a class="btn btn-primary ml-1" href="https://github.com/wsand02/spectre" target="_blank">GitHub</a></div>
+      </div>
+      <div class="docs-sidebar off-canvas-sidebar" id="sidebar">
+        <div class="docs-brand"><a class="docs-logo" href="../index.html">
+            <h2>GLACIALWISP</h2><small class="label label-secondary text-bold">DOCS</small></a>
+        </div>
+        <div class="docs-nav">
+          <div class="accordion-container">
+            <div class="accordion">
+              <input id="accordion-getting-started" type="checkbox" name="docs-accordion-checkbox" hidden="" checked="checked"/>
+              <label class="accordion-header c-hand" for="accordion-getting-started">Getting started</label>
+              <div class="accordion-body">
+                <ul class="menu menu-nav">
+                  <li class="menu-item"><a href="../getting-started/installation.html">Installation</a>
+                  </li>
+                  <li class="menu-item"><a href="../getting-started/darkmode.html">Dark mode</a>
+                  </li>
+                  <li class="menu-item"><a href="../getting-started/whatsnew.html">What's new</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion">
+              <input id="accordion-elements" type="checkbox" name="docs-accordion-checkbox" hidden=""/>
+              <label class="accordion-header c-hand" for="accordion-elements">Elements</label>
+              <div class="accordion-body">
+                <ul class="menu menu-nav">
+                  <li class="menu-item"><a href="../elements/typography.html">Typography</a>
+                  </li>
+                  <li class="menu-item"><a href="../elements/tables.html">Tables</a>
+                  </li>
+                  <li class="menu-item"><a href="../elements/buttons.html">Buttons</a>
+                  </li>
+                  <li class="menu-item"><a href="../elements/forms.html">Forms</a>
+                  </li>
+                  <li class="menu-item"><a href="../elements/icons.html">Icons.css</a>
+                  </li>
+                  <li class="menu-item"><a href="../elements/labels.html">Labels</a>
+                  </li>
+                  <li class="menu-item"><a href="../elements/code.html">Code</a>
+                  </li>
+                  <li class="menu-item"><a href="../elements/media.html">Media</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion">
+              <input id="accordion-layout" type="checkbox" name="docs-accordion-checkbox" hidden=""/>
+              <label class="accordion-header c-hand" for="accordion-layout">Layout</label>
+              <div class="accordion-body">
+                <ul class="menu menu-nav">
+                  <li class="menu-item"><a href="../layout/grid.html">Flexbox grid</a>
+                  </li>
+                  <li class="menu-item"><a href="../layout/responsive.html">Responsive</a>
+                  </li>
+                  <li class="menu-item"><a href="../layout/hero.html">Hero</a>
+                  </li>
+                  <li class="menu-item"><a href="../layout/navbar.html">Navbar</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion">
+              <input id="accordion-components" type="checkbox" name="docs-accordion-checkbox" hidden=""/>
+              <label class="accordion-header c-hand" for="accordion-components">Components</label>
+              <div class="accordion-body">
+                <ul class="menu menu-nav">
+                  <li class="menu-item"><a href="../components/accordions.html">Accordions</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/avatars.html">Avatars</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/badges.html">Badges</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/bars.html">Bars</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/breadcrumbs.html">Breadcrumbs</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/cards.html">Cards</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/chips.html">Chips</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/empty.html">Empty states</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/menu.html">Menu</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/modals.html">Modals</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/nav.html">Nav</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/pagination.html">Pagination</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/panels.html">Panels</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/popovers.html">Popovers</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/steps.html">Steps</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/tabs.html">Tabs</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/tiles.html">Tiles</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/toasts.html">Toasts</a>
+                  </li>
+                  <li class="menu-item"><a href="../components/tooltips.html">Tooltips</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion">
+              <input id="accordion-utilities" type="checkbox" name="docs-accordion-checkbox" hidden=""/>
+              <label class="accordion-header c-hand" for="accordion-utilities">Utilities</label>
+              <div class="accordion-body">
+                <ul class="menu menu-nav">
+                  <li class="menu-item"><a href="../utilities/colors.html">Colors</a>
+                  </li>
+                  <li class="menu-item"><a href="../utilities/cursors.html">Cursors</a>
+                  </li>
+                  <li class="menu-item"><a href="../utilities/display.html">Display</a>
+                  </li>
+                  <li class="menu-item"><a href="../utilities/divider.html">Divider</a>
+                  </li>
+                  <li class="menu-item"><a href="../utilities/loading.html">Loading</a>
+                  </li>
+                  <li class="menu-item"><a href="../utilities/position.html">Position</a>
+                  </li>
+                  <li class="menu-item"><a href="../utilities/shapes.html">Shapes</a>
+                  </li>
+                  <li class="menu-item"><a href="../utilities/text.html">Text</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion">
+              <input id="accordion-experimentals" type="checkbox" name="docs-accordion-checkbox" hidden=""/>
+              <label class="accordion-header c-hand" for="accordion-experimentals">Experimentals</label>
+              <div class="accordion-body">
+                <ul class="menu menu-nav">
+                  <li class="menu-item"><a href="../experimentals/viewer-360.html">360-Degree Viewer</a>
+                  </li>
+                  <li class="menu-item"><a href="../experimentals/autocomplete.html">Autocomplete</a>
+                  </li>
+                  <li class="menu-item"><a href="../experimentals/calendars.html">Calendars</a>
+                  </li>
+                  <li class="menu-item"><a href="../experimentals/carousels.html">Carousels</a>
+                  </li>
+                  <li class="menu-item"><a href="../experimentals/comparison.html">Comparison sliders</a>
+                  </li>
+                  <li class="menu-item"><a href="../experimentals/filters.html">Filters</a>
+                  </li>
+                  <li class="menu-item"><a href="../experimentals/meters.html">Meters</a>
+                  </li>
+                  <li class="menu-item"><a href="../experimentals/off-canvas.html">Off-canvas</a>
+                  </li>
+                  <li class="menu-item"><a href="../experimentals/parallax.html">Parallax</a>
+                  </li>
+                  <li class="menu-item"><a href="../experimentals/progress.html">Progress</a>
+                  </li>
+                  <li class="menu-item"><a href="../experimentals/sliders.html">Sliders</a>
+                  </li>
+                  <li class="menu-item"><a href="../experimentals/timelines.html">Timelines</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><a class="off-canvas-overlay" href="#close"></a>
+      <div class="off-canvas-content">
+        <div class="docs-content" id="content">
+          <div class="container" id="dark-mode">
+            <h3 class="s-title">Dark mode<a class="anchor" href="#dark-mode" aria-hidden="true">#</a></h3>
+            <p>GlacialWisp already everything in place to facilitate dark mode using css variables based on the users device preferences. However if you wish to be able to toggle dark mode, you must add two scripts to your templates to enable it.</p>
+            <h4 class="s-subtitle" id="enable-dynamic-switching">Enable dynamic switching<a class="anchor" href="#enable-dynamic-switching" aria-hidden="true">#</a></h4>
+            <p>To enable dynamic switching between light and dark mode, you must add this to the head of your templates.</p>
+            <pre class="code" data-lang="javascript"><span class="token keyword">function</span> <span class="token function">getTheme</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">"userTheme"</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">"userTheme"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>matchMedia<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span><span class="token string">'(prefers-color-scheme: dark)'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>matches<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token string">'dark'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span><span class="token string">'(prefers-color-scheme: light)'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>matches<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token string">'light'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// fallback</span>
+  <span class="token keyword">return</span> <span class="token string">'light'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+window<span class="token punctuation">.</span>getTheme <span class="token operator">=</span> getTheme<span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">changeTheme</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span>
+    <span class="token string">'data-theme'</span><span class="token punctuation">,</span>
+    window<span class="token punctuation">.</span><span class="token function">getTheme</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'dark'</span> <span class="token operator">?</span> <span class="token string">'dark'</span> <span class="token operator">:</span> <span class="token string">'light'</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+window<span class="token punctuation">.</span>changeTheme <span class="token operator">=</span> changeTheme<span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">setTheme</span><span class="token punctuation">(</span><span class="token parameter">theme</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>theme <span class="token operator">==</span> <span class="token string">'dark'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">"userTheme"</span><span class="token punctuation">,</span> <span class="token string">"dark"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme <span class="token operator">==</span> <span class="token string">'light'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">"userTheme"</span><span class="token punctuation">,</span> <span class="token string">"light"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  window<span class="token punctuation">.</span><span class="token function">changeTheme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+window<span class="token punctuation">.</span>setTheme <span class="token operator">=</span> setTheme<span class="token punctuation">;</span>
+
+<span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">setTheme</span><span class="token punctuation">(</span><span class="token function">getTheme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+            <h4 class="s-subtitle" id="add-dark-mode-toggle">Add dark mode toggle<a class="anchor" href="#add-dark-mode-toggle" aria-hidden="true">#</a></h4>
+            <p>To allow for the user to switch between dark and light mode without leaving the app, you must add the dark mode toggle to your templates, just before the closing body tag.</p>
+            <pre class="code" data-lang="javascript"><span class="token string">'use strict'</span><span class="token punctuation">;</span>
+window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'load'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> themeSwitchWrapper <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'theme-switch-wrapper'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> themeSwitch <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'label'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  themeSwitch<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'form-switch'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  themeSwitch<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  &lt;input type="checkbox">
+  &lt;i class="form-icon">&lt;/i>&lt;span id="theme-switch-label">Dark mode&lt;/span>
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  themeSwitchWrapper<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>themeSwitch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> checkbox <span class="token operator">=</span> themeSwitchWrapper<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'input[type="checkbox"]'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// set default</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span><span class="token function">getTheme</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'dark'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    checkbox<span class="token punctuation">.</span>checked <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    checkbox<span class="token punctuation">.</span>checked <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  checkbox<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    window<span class="token punctuation">.</span><span class="token function">setTheme</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>checked <span class="token operator">?</span> <span class="token string">'dark'</span> <span class="token operator">:</span> <span class="token string">'light'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  window
+    <span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span><span class="token string">'(prefers-color-scheme: dark)'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'userTheme'</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>matches<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          window<span class="token punctuation">.</span><span class="token function">setTheme</span><span class="token punctuation">(</span><span class="token string">'dark'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          window<span class="token punctuation">.</span><span class="token function">setTheme</span><span class="token punctuation">(</span><span class="token string">'light'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre>
+            <p>
+               Finally you must also place the the theme switch wrapper somewhere in your app.</p>
+            <pre class="code" data-lang="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>theme-switch-wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>noscript</span><span class="token punctuation">></span></span>
+    Changing color scheme dynamically requires JavaScript.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>noscript</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></pre>
+            <p>
+               Note, the scripts provided here are to preferably be added inline to prevent flickering when loading.</p>
+          </div>
+          <div class="docs-footer container grid-lg" id="copyright">
+            <p><a href="https://github.com/wsand02/glacialwisp.css" target="_blank">GitHub</a> · Version <span class="version"></span></p>
+            <div class="columns"> 
+              <div class="column"> 
+                <p>Originally designed and built with <span class="text-error">&hearts;</span> by <a href="https://twitter.com/picturepan2" target="_blank">Yan Zhu</a>. Licensed under the <a href="https://github.com/wsand02/glacialwisp.css/blob/master/LICENSE" target="_blank">MIT License</a>. Modified by <a href="https://wilsandbrink.com" target="_blank">William Sandbrink</a>.</p>
+              </div>
+              <div class="column">
+                <div class="form-group float-right" id="theme-switch-wrapper">
+                  <noscript>
+                    <Changing>color scheme dynamically requires JavaScript.</Changing>
+                  </noscript>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      'use strict';
+      window.addEventListener('load', () => {
+        let themeSwitchWrapper = document.getElementById('theme-switch-wrapper');
+        let themeSwitch = document.createElement('label');
+        themeSwitch.classList.add('form-switch');
+        themeSwitch.innerHTML = `
+        <input type="checkbox">
+        <i class="form-icon"></i><span id="theme-switch-label">Dark mode</span>
+        `;
+        themeSwitchWrapper.appendChild(themeSwitch);
+        let checkbox = themeSwitchWrapper.querySelector('input[type="checkbox"]');
+        // set default
+        if (window.getTheme() == 'dark') {
+          checkbox.checked = true;
+        } else {
+          checkbox.checked = false;
+        }
+        checkbox.addEventListener('click', (e) => {
+          window.setTheme(e.target.checked ? 'dark' : 'light');
+        });
+        window
+          .matchMedia('(prefers-color-scheme: dark)')
+          .addEventListener('change', (e) => {
+            if (localStorage.getItem('userTheme') == null) {
+              if (e.matches) {
+                window.setTheme('dark');
+              } else {
+                window.setTheme('light');
+              }
+            }
+          });
+        });
+    </script>
+  </body>
+</html>

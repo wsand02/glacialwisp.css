@@ -324,8 +324,8 @@ html[data-theme="dark"] {
 
 .icon-delete::before {
   border: 0.1rem solid currentColor;
-  border-bottom-left-radius: 0.1rem;
-  border-bottom-right-radius: 0.1rem;
+  border-bottom-left-radius: 0.05rem;
+  border-bottom-right-radius: 0.05rem;
   border-top: 0;
   height: 0.75em;
   top: 60%;
@@ -343,7 +343,7 @@ html[data-theme="dark"] {
 
 .icon-share {
   border: 0.1rem solid currentColor;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   border-right: 0;
   border-top: 0;
 }
@@ -374,9 +374,9 @@ html[data-theme="dark"] {
 }
 .icon-flag::after {
   border: 0.1rem solid currentColor;
-  border-bottom-right-radius: 0.1rem;
+  border-bottom-right-radius: 0.05rem;
   border-left: 0;
-  border-top-right-radius: 0.1rem;
+  border-top-right-radius: 0.05rem;
   height: 0.65em;
   top: 35%;
   left: 60%;
@@ -386,8 +386,8 @@ html[data-theme="dark"] {
 .icon-bookmark::before {
   border: 0.1rem solid currentColor;
   border-bottom: 0;
-  border-top-left-radius: 0.1rem;
-  border-top-right-radius: 0.1rem;
+  border-top-left-radius: 0.05rem;
+  border-top-right-radius: 0.05rem;
   height: 0.9em;
   width: 0.8em;
 }
@@ -395,7 +395,7 @@ html[data-theme="dark"] {
   border: 0.1rem solid currentColor;
   border-bottom: 0;
   border-left: 0;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   height: 0.5em;
   transform: translate(-50%, 35%) rotate(-45deg) skew(15deg, 15deg);
   width: 0.5em;
@@ -431,7 +431,7 @@ html[data-theme="dark"] {
 
 .icon-copy::before {
   border: 0.1rem solid currentColor;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   border-right: 0;
   border-bottom: 0;
   height: 0.8em;
@@ -441,7 +441,7 @@ html[data-theme="dark"] {
 }
 .icon-copy::after {
   border: 0.1rem solid currentColor;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   height: 0.8em;
   left: 60%;
   top: 60%;
@@ -468,7 +468,7 @@ html[data-theme="dark"] {
 
 .icon-mail::before {
   border: 0.1rem solid currentColor;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   height: 0.8em;
   width: 1em;
 }
@@ -499,12 +499,12 @@ html[data-theme="dark"] {
 .icon-message {
   border: 0.1rem solid currentColor;
   border-bottom: 0;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   border-right: 0;
 }
 .icon-message::before {
   border: 0.1rem solid currentColor;
-  border-bottom-right-radius: 0.1rem;
+  border-bottom-right-radius: 0.05rem;
   border-left: 0;
   border-top: 0;
   height: 0.8em;
@@ -514,7 +514,7 @@ html[data-theme="dark"] {
 }
 .icon-message::after {
   background: currentColor;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   height: 0.3em;
   left: 10%;
   top: 100%;
@@ -524,7 +524,7 @@ html[data-theme="dark"] {
 
 .icon-photo {
   border: 0.1rem solid currentColor;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
 }
 .icon-photo::before {
   border: 0.1rem solid currentColor;

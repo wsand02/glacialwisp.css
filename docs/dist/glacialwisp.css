@@ -695,7 +695,7 @@ abbr[title] {
 }
 
 kbd {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   line-height: 1.25;
   padding: 0.1rem 0.2rem;
   background: #131111;
@@ -707,7 +707,7 @@ mark {
   background: #ffe9b3;
   color: rgb(32.4583333333, 29.0416666667, 29.0416666667);
   border-bottom: 0.05rem solid rgb(255, 210.8552631579, 102.5);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   padding: 0.05rem 0.1rem 0;
 }
 
@@ -862,7 +862,7 @@ html:lang(ko),
   appearance: none;
   background: var(--color-background);
   border: 0.05rem solid #23b0ff;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   color: #23b0ff;
   cursor: pointer;
   display: inline-block;
@@ -1103,7 +1103,7 @@ legend {
   background: var(--color-body-background);
   background-image: none;
   border: 0.05rem solid rgb(163.625, 152.875, 152.875);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   color: var(--color-text);
   border-color: var(--color-background2);
   display: block;
@@ -1170,7 +1170,7 @@ textarea.form-input.input-sm {
 .form-select {
   appearance: none;
   border: 0.05rem solid rgb(163.625, 152.875, 152.875);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   color: inherit;
   font-size: 0.8rem;
   height: 1.8rem;
@@ -1315,7 +1315,7 @@ textarea.form-input.input-sm {
 }
 
 .form-checkbox .form-icon {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
 }
 .form-checkbox input:checked + .form-icon::before {
   background-clip: padding-box;
@@ -1405,7 +1405,7 @@ textarea.form-input.input-sm {
 .input-group .input-group-addon {
   background: #f5f5f5;
   border: 0.05rem solid rgb(163.625, 152.875, 152.875);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   line-height: 1.2rem;
   padding: 0.25rem 0.4rem;
   white-space: nowrap;
@@ -1570,7 +1570,7 @@ input.disabled + .form-icon {
 }
 
 .label {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   line-height: 1.25;
   padding: 0.1rem 0.2rem;
   background-color: var(--color-background);
@@ -2351,7 +2351,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .bar {
   background: #201e1e;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   display: flex;
   flex-wrap: nowrap;
   height: 0.8rem;
@@ -2373,12 +2373,12 @@ summary.accordion-header::-webkit-details-marker {
   width: 0;
 }
 .bar .bar-item:first-child {
-  border-bottom-left-radius: 0.1rem;
-  border-top-left-radius: 0.1rem;
+  border-bottom-left-radius: 0.05rem;
+  border-top-left-radius: 0.05rem;
 }
 .bar .bar-item:last-child {
-  border-bottom-right-radius: 0.1rem;
-  border-top-right-radius: 0.1rem;
+  border-bottom-right-radius: 0.05rem;
+  border-top-right-radius: 0.05rem;
   flex-shrink: 1;
 }
 
@@ -2415,7 +2415,7 @@ summary.accordion-header::-webkit-details-marker {
 .card {
   background: var(--color-background);
   border: 0.05rem solid rgb(187.7083333333, 179.7916666667, 179.7916666667);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   display: flex;
   flex-direction: column;
 }
@@ -2440,12 +2440,12 @@ summary.accordion-header::-webkit-details-marker {
   padding-top: 0;
 }
 .card .card-image:first-child img {
-  border-top-left-radius: 0.1rem;
-  border-top-right-radius: 0.1rem;
+  border-top-left-radius: 0.05rem;
+  border-top-right-radius: 0.05rem;
 }
 .card .card-image:last-child img {
-  border-bottom-left-radius: 0.1rem;
-  border-bottom-right-radius: 0.1rem;
+  border-bottom-left-radius: 0.05rem;
+  border-bottom-right-radius: 0.05rem;
 }
 
 .chip {
@@ -2502,13 +2502,13 @@ summary.accordion-header::-webkit-details-marker {
   display: block;
 }
 .dropdown .btn-group .dropdown-toggle:nth-last-child(2) {
-  border-bottom-right-radius: 0.1rem;
-  border-top-right-radius: 0.1rem;
+  border-bottom-right-radius: 0.05rem;
+  border-top-right-radius: 0.05rem;
 }
 
 .empty {
   background: var(--color-background);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   color: var(--color-text);
   text-align: center;
   padding: 3.2rem 1.6rem;
@@ -2527,7 +2527,7 @@ summary.accordion-header::-webkit-details-marker {
 .menu {
   box-shadow: 0 0.05rem 0.2rem rgba(var(--color-shadow), 0.3);
   background: var(--color-background2);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   list-style: none;
   margin: 0;
   min-width: 180px;
@@ -2546,7 +2546,7 @@ summary.accordion-header::-webkit-details-marker {
   text-decoration: none;
 }
 .menu .menu-item > a {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   color: inherit;
   display: block;
   margin: 0 -0.4rem;
@@ -2633,7 +2633,7 @@ summary.accordion-header::-webkit-details-marker {
 .modal-container {
   box-shadow: 0 0.2rem 0.5rem rgba(var(--color-shadow), 0.3);
   background: var(--color-background2);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   display: flex;
   flex-direction: column;
   max-height: 75vh;
@@ -2699,7 +2699,7 @@ summary.accordion-header::-webkit-details-marker {
   padding: 0.2rem 0.2rem;
 }
 .pagination .page-item a {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   display: inline-block;
   padding: 0.2rem 0.4rem;
   text-decoration: none;
@@ -2734,7 +2734,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .panel {
   border: 0.05rem solid rgb(187.7083333333, 179.7916666667, 179.7916666667);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   display: flex;
   flex-direction: column;
 }
@@ -2952,7 +2952,7 @@ summary.accordion-header::-webkit-details-marker {
   background-color: var(--color-background2);
   border-color: var(--color-background2);
   border: 0.05rem solid #131111;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   color: #fff;
   display: block;
   padding: 0.4rem;
@@ -2996,7 +2996,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 .tooltip::after {
   background: rgba(19, 17, 17, 0.95);
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   bottom: 100%;
   color: #fff;
   content: attr(data-tooltip);
@@ -3194,6 +3194,10 @@ a.text-error:visited {
 .bg-error {
   background: #e85600 !important;
   color: #fff;
+}
+
+.bg-primary-gradient {
+  background: linear-gradient(#106992, #39eee9) !important;
 }
 
 .c-hand {
@@ -3580,7 +3584,7 @@ a.text-error:visited {
 }
 
 .s-rounded {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
 }
 
 .s-circle {

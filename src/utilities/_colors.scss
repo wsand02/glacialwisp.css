@@ -29,3 +29,5 @@
 @include bg-color-variant(".bg-warning", $warning-color);
 
 @include bg-color-variant(".bg-error", $error-color);
+
+@include bg-gradient-variant(".bg-primary-gradient", $primary-gradient);

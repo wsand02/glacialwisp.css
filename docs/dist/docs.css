@@ -156,7 +156,7 @@ html[data-theme="dark"] {
   padding: 0.4rem;
 }
 .docs-content .docs-block {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   padding: 0.4rem;
 }
 .docs-content .docs-block.bg-gray {
@@ -180,7 +180,7 @@ html[data-theme="dark"] {
   padding: 0.75rem 0.25rem;
 }
 .docs-content .docs-color {
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   margin: 0.25rem 0;
   padding: 5rem 0.5rem 0.5rem;
 }
@@ -230,7 +230,7 @@ html[data-theme="dark"] {
   align-content: space-around;
   align-items: center;
   background: #23b0ff;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   color: #fff;
   display: flex;
   font-size: 1.2rem;
@@ -266,7 +266,7 @@ html[data-theme="dark"] {
 }
 .docs-brand .docs-logo {
   align-items: center;
-  border-radius: 0.1rem;
+  border-radius: 0.05rem;
   display: inline-flex;
   font-size: 0.7rem;
   height: 2rem;

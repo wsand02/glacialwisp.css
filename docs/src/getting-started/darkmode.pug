@@ -1,0 +1,108 @@
+extends ../_layout/_docs-layout.pug
+
+block variables
+  - var slug = 'dark-mode'
+  - var parent = 'getting-started'
+  - var title = 'Dark mode - Getting started - GlacialWisp.css CSS Framework'
+  - var description = 'GlacialWisp.css CSS Framework is a lightweight, responsive and modern CSS framework for faster and extensible development. GlacialWisp provides basic styles for typography and elements, flexbox based responsive layout system, pure CSS components and utilities with best practice coding and consistent design language.'
+
+block docs-content
+  +docs-heading('dark-mode', 'Dark mode')
+    
+    
+    p
+      | GlacialWisp already everything in place to facilitate dark mode using css variables based on the users device preferences. However if you wish to be able to toggle dark mode, you must add two scripts to your templates to enable it.
+
+    +docs-subheading('enable-dynamic-switching', 'Enable dynamic switching')
+    p
+      | To enable dynamic switching between light and dark mode, you must add this to the head of your templates.
+    pre.code(data-lang='javascript')
+        :highlight(lang="javascript")
+          function getTheme() {
+            if (localStorage.getItem("userTheme") != null) {
+              return localStorage.getItem("userTheme");
+            }
+            if (window.matchMedia) {
+              if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                return 'dark';
+              } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+                return 'light';
+              }
+            }
+            // fallback
+            return 'light';
+          }
+          window.getTheme = getTheme;
+
+          function changeTheme() {
+            document.documentElement.setAttribute(
+              'data-theme',
+              window.getTheme() == 'dark' ? 'dark' : 'light'
+            );
+          }
+          window.changeTheme = changeTheme;
+
+          function setTheme(theme) {
+            if (theme == 'dark') {
+              localStorage.setItem("userTheme", "dark");
+            } else if (theme == 'light') {
+              localStorage.setItem("userTheme", "light");
+            }
+            window.changeTheme();
+          }
+          window.setTheme = setTheme;
+
+          (function() {
+            setTheme(getTheme());
+          })();
+    
+    +docs-subheading('add-dark-mode-toggle', 'Add dark mode toggle')
+    p
+      | To allow for the user to switch between dark and light mode without leaving the app, you must add the dark mode toggle to your templates, just before the closing body tag.
+    pre.code(data-lang='javascript')
+        :highlight(lang="javascript")
+          'use strict';
+          window.addEventListener('load', () => {
+            let themeSwitchWrapper = document.getElementById('theme-switch-wrapper');
+            let themeSwitch = document.createElement('label');
+            themeSwitch.classList.add('form-switch');
+            themeSwitch.innerHTML = `
+            <input type="checkbox">
+            <i class="form-icon"></i><span id="theme-switch-label">Dark mode</span>
+            `;
+            themeSwitchWrapper.appendChild(themeSwitch);
+            let checkbox = themeSwitchWrapper.querySelector('input[type="checkbox"]');
+            // set default
+            if (window.getTheme() == 'dark') {
+              checkbox.checked = true;
+            } else {
+              checkbox.checked = false;
+            }
+            checkbox.addEventListener('click', (e) => {
+              window.setTheme(e.target.checked ? 'dark' : 'light');
+            });
+            window
+              .matchMedia('(prefers-color-scheme: dark)')
+              .addEventListener('change', (e) => {
+                if (localStorage.getItem('userTheme') == null) {
+                  if (e.matches) {
+                    window.setTheme('dark');
+                  } else {
+                    window.setTheme('light');
+                  }
+                }
+              });
+            });
+    p 
+      | Finally you must also place the the theme switch wrapper somewhere in your app.
+    pre.code(data-lang='html')
+        :highlight(lang="html")
+          <div id="theme-switch-wrapper">
+            <noscript>
+              Changing color scheme dynamically requires JavaScript.
+            </noscript>
+          </div>
+    p 
+      | Note, the scripts provided here are to preferably be added inline to prevent flickering when loading.
+
+  include ../_layout/_footer.pug

@@ -9,6 +9,12 @@
   }
 }
 
+@mixin bg-gradient-variant($name: ".bg-primary-gradient", $color: $primary-color) {
+  #{$name} {
+    background: $color !important;
+  }
+}
+
 @mixin bg-dynamic-color-variant($selector, $color) {
   #{$selector} {
     background-color: var(#{$color}) !important;
