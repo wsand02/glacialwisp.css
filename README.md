@@ -14,7 +14,7 @@ Download the compiled and minified [Glacial Wisp CSS files](https://github.com/w
 `<link rel="stylesheet" href="glacialwisp.min.css">`
 
 ### Install with NPM
-`$ npm i github:wsand02/glacialwisp.css`
+`$ npm i glacialwisp.css`
 
 
 Originally designed and built with ♥ by [Yan Zhu](https://twitter.com/picturepan2).

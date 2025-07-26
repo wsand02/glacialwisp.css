@@ -2,6 +2,16 @@
   "name": "glacialwisp.css",
   "version": "0.0.1",
   "main": "dist/glacialwisp.css",
+  "homepage": "http://wsand02.github.io/glacialwisp.css",
+  "author": "wsand02 <me@wilsandbrink.com>",
+  "description": "GlacialWisp.css: A CSS framework for my personal projects, forked from Spectre.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wsand02/glacialwisp.css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wsand02/glacialwisp.css/issues"
+  },
   "scripts": {
     "css": "npm-run-all css-compile css-minify css-format",
     "css-compile": "sass src/:dist --no-source-map --style expanded",
