@@ -1,45 +1,45 @@
 <!DOCTYPE html>
-<script>
-  function getTheme() {
-    if (localStorage.getItem("userTheme") != null) {
-      return localStorage.getItem("userTheme");
-    }
-    if (window.matchMedia) {
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        return 'dark';
-      } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-        return 'light';
-      }
-    }
-    // fallback
-    return 'light';
-  }
-  window.getTheme = getTheme;
-  
-  function changeTheme() {
-    document.documentElement.setAttribute(
-      'data-theme',
-      window.getTheme() == 'dark' ? 'dark' : 'light'
-    );
-  }
-  window.changeTheme = changeTheme;
-  
-  function setTheme(theme) {
-    if (theme == 'dark') {
-      localStorage.setItem("userTheme", "dark");
-    } else if (theme == 'light') {
-      localStorage.setItem("userTheme", "light");
-    }
-    window.changeTheme();
-  }
-  window.setTheme = setTheme;
-  
-  (function() {
-    setTheme(getTheme());
-  })();
-</script>
 <html lang="en">
   <head>
+    <script>
+      function getTheme() {
+        if (localStorage.getItem("userTheme") != null) {
+          return localStorage.getItem("userTheme");
+        }
+        if (window.matchMedia) {
+          if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'dark';
+          } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+            return 'light';
+          }
+        }
+        // fallback
+        return 'light';
+      }
+      window.getTheme = getTheme;
+      
+      function changeTheme() {
+        document.documentElement.setAttribute(
+          'data-theme',
+          window.getTheme() == 'dark' ? 'dark' : 'light'
+        );
+      }
+      window.changeTheme = changeTheme;
+      
+      function setTheme(theme) {
+        if (theme == 'dark') {
+          localStorage.setItem("userTheme", "dark");
+        } else if (theme == 'light') {
+          localStorage.setItem("userTheme", "light");
+        }
+        window.changeTheme();
+      }
+      window.setTheme = setTheme;
+      
+      (function() {
+        setTheme(getTheme());
+      })();
+    </script>
     <title>Toasts - Components - GlacialWisp.css CSS Framework</title>
     <meta charset="utf-8">
     <meta name="robots" content="index, follow">
